@@ -1,0 +1,482 @@
+{
+    "common": {
+        "currency": "USD",
+        "currency-symbol": "$",
+        "currency-name": "DOLLAR",
+        "genre": {
+            "all": "Semua",
+            "romance": "Romantis",
+            "drama": "Drama",
+            "sports": "Olahraga",
+            "BL": "BL",
+            "fantasy": "Fantasi",
+            "action": "Aksi",
+            "school": "Materi sekolah",
+            "etc": "Lain-lain",
+            "blgl": "BL/GL",
+            "manga": "Horror",
+            "challenges": "Kontes"
+        },
+        "week": {
+            "mon": "SEN",
+            "tue": "SEL",
+            "wed": "RAB",
+            "thu": "KAM.",
+            "fri": "JUM",
+            "sat": "SAB",
+            "sun": "MIN",
+            "com": "TAMAT"
+        },
+        "no-episodes": "{{no}} Semua episode",
+        "all-age": "Semua Usia",
+        "age-over": "Usia {{age}}+",
+        "see-more": "Lanjutkan",
+        "badge": {
+            "discount": "Diskon",
+            "completed": "Lengkap",
+            "recommended": "Direkomendasikan",
+            "updated": "Diperbarui"
+        },
+        "button-confirm": "Iya",
+        "new": "BARU",
+        "coming-soon": "Segera akan datang"
+    },
+    "side-nav": {
+        "my-information": "Profil Saya",
+        "login": "Masuk / Daftar",
+        "coin": "ContentCoin",
+        "my-library": "Favoritku",
+        "toda-now": "Toda waktu nyata",
+        "customer-support": "Bantuan",
+        "setting": "Pengaturan",
+        "logout": "Keluar"
+    },
+    "header": {
+        "login": "Masuk",
+        "billing": "Isi Koin",
+        "setting": "Pengaturan",
+        "customerSupport": "Bantuan",
+        "notice": "Pengumuman",
+        "customerSupportHistoryDetail": "Bantuan",
+        "unsubscribe": "Hapus Akun",
+        "main": "utama",
+        "detail": "",
+        "webtoon": "Genre",
+        "mylib": "Favoritku",
+        "purchase": "Daftar Pembelian",
+        "myfavorite": "Webtoon Favorit",
+        "event": "Peristiwa",
+        "delete": "Menghapus",
+        "history": "Riwayat pembelian",
+        "policy": "Syarat Penggunaan",
+        "privacy": "Rahasia pribadi",
+        "youthpolicy": "Kebijakan Perlindungan Pemuda",
+        "title_webtoon": "Webtoon",
+        "title_webnovel": "WebNovel"
+    },
+    "main": {
+        "week": {
+            "header": "Webtoon Harian",
+            "header-novel": "Novel Harian"
+        },
+        "ranking": {
+            "header": "Ranking Terkini",
+            "description": "Kamu akan menyesal jika melewatinya!"
+        },
+        "popular": {
+            "header": "Webtoon Ranking Top"
+        },
+        "new-update": {
+            "header": "Webtoon Baru"
+        },
+        "idol-goods": {
+            "header": "Idol Goods",
+            "description": "Idol goods available for purchase!"
+        },
+        "hot-romance": {
+            "header": "WEBTOON ROMANTIS TERPOPULER",
+            "header-novel": "WEBTOON ROMANTIS TERPOPULER",
+            "description": "Cerita manis tentang cinta"
+        },
+        "hot-bl-picks": {
+            "header": "Webtoons BL panas",
+            "description": "Cinta pemuda tampan"
+        },
+        "cheap-sale": {
+            "header": "WEBTOON GRATIS HARI INI",
+            "header-novel": "WEBTOON GRATIS HARI INI"
+        },
+        "footer": {
+            "top": "Informasi bisnis - Webtoon TV",
+            "contact": "Kontak",
+            "email": "Surel",
+            "address": "Alamat",
+            "address-content": "608-1, 330, Seongam-ro, Mapo-gu,\nSeoul, Republic of Korea",
+            "tel": "+082-02-6243-6242"
+        },
+        "extra-footer": {
+            "top": "Penyediaan teknologi dan informasi operator",
+            "title": {
+                "name": "Nama",
+                "english-name": "Nama Inggris",
+                "registration-number": "\nNomor pendaftaran",
+                "email": "Surel",
+                "phone": "Telepon",
+                "address": "Alamat"
+            },
+            "content": {
+                "name": "TODAQ GSC Inc.",
+                "english-name": "TODAQ GSC Inc.",
+                "registration-number": "197-86-01189",
+                "email": "helpdesk@todaq.net",
+                "phone": "+82-3213-8188",
+                "address": "14, Pangyoyeok-ro 192beon-gil,\nBundang-gu, Seongnam-si,\nGyeonggi-do, Republic of Korea"
+            }
+        }
+    },
+    "footer": {
+        "home": "Beranda",
+        "page": "Genres",
+        "bill": "Isi Koin",
+        "user": "Favoritku"
+    },
+    "search": {
+        "placeholder": "Cari Judul/Kata kunci",
+        "result": "Ada total {{no}} pencarian"
+    },
+    "login": {
+        "header": "Masuk/Daftar dengan akun Social Media",
+        "kakao": "Masuk dengan akun Kakao",
+        "google": "Masuk dengan akun Google",
+        "apple": "Sign in with Apple"
+    },
+    "billing": {
+        "BL001": "Poin ContentCoin saya",
+        "BL002": "SIsi Koin",
+        "BL003": "Cek jumlah pembayaran",
+        "BL004": "Ubah Pembayaran",
+        "BL005": "Panduan penggunaan produk berbayar",
+        "BL006": "Anda bisa membatalkan pembelian atau mendapatkan pengembalian uang untuk Webtoon yang Anda sewa atau koleksi",
+        "BL007": "Untuk pertanyaan tentang pembayaran, silahkan hubungi kami di halaman Bantuan ",
+        "BL008": "(Wajib) Saya telah membaca semua persyaratan dan menyetujui proses pembelian",
+        "BL009": "(Opsional) Saya menyetujui pembayaran dengan metode pembayaran tersebut ",
+        "BL010": "Lanjut ke Pembayaran",
+        "options": {
+            "card": "Kartu kredit"
+        },
+        "alert": {
+            "coin": "Pilih jumlah pembayaran",
+            "approve": "Harap setujui proses pembelian"
+        },
+        "amount": "Jumlah pembayaran",
+        "payment-information": "Informasi pembayaran",
+        "input-card-info": "Harap masukkan informasi kartu Anda",
+        "card-number": "Nomor kartu",
+        "card-expired": "Kedaluwarsa",
+        "card-cvv": "CVV",
+        "input-user-info": "Harap masukkan informasi pengguna.",
+        "name": "Nama",
+        "email": "Surel",
+        "country": "Negara",
+        "locality": "Lokalitas",
+        "address": "Alamat",
+        "administrative-area": "Wilayah Administratif",
+        "postal-code": "Kode Pos",
+        "payment": "Pembayaran",
+        "placeholder": {
+            "first-name": "Nama depan",
+            "last-name": "nama keluarga",
+            "email": "email@address.com"
+        },
+        "confirm": "Konfirmasi",
+        "alert-message": "Harap masukkan semua detail",
+        "history-asc": "Berdasarkan Terlama",
+        "history-desc": "Berdasarkan Terbaru",
+        "history-item": {
+            "title": "Isi Koin ({{tdn}} ContentCoin)"
+        }
+    },
+    "my-library": {
+        "coin": "ContentCoin",
+        "billing": "Isi Koin",
+        "icon-1": "Pengumuman",
+        "icon-2": "Riwayat\npembelian",
+        "icon-3": "Bantuan",
+        "list-1": "Koleksi Webtoon",
+        "list-2": "Webtoon Favorit",
+        "list-3": "Terakhir Dilihat",
+        "no-data": "Tidak ada pencarian "
+    },
+    "history-detail": {
+        "complete": "Jawaban selesai",
+        "waiting": "Menunggu jawaban"
+    },
+    "purchase-list": {
+        "no-purchased": "Total {{no}}",
+        "sort": {
+            "updated": "Berdasarkan Update",
+            "popular": "Berdasarkan Populer",
+            "name": "Berdasarkan Judul",
+            "asc": "asc",
+            "desc": "desc"
+        },
+        "no-buy": "Total {{no}} dibeli",
+        "no-rent": "Total {{no}} persewaan"
+    },
+    "setting": {
+        "account": "Informasi Akun Saya",
+        "event": "Notifikasi Event",
+        "event.detail": "Anda bisa dapat informasi tentang event/promo",
+        "image-cache": "Hapus cache gambar",
+        "app-version": "Versi Aplikasi",
+        "unsubscribe": "Hapus Akun",
+        "language": "Bahasa / Language",
+        "please-login": "\nSilahkan masuk"
+    },
+    "unsubscribe": {
+        "poll": {
+            "question": "Mengapa Anda ingin menghapus akun Anda?",
+            "answer-1": "Layanan yang tidak nyaman dan banyak eror",
+            "answer-2": "Tidak cukup konten yang tersedia",
+            "answer-3": "Harga untuk menikmati konten terlalu memberatkan",
+            "answer-4": "Saya merasa layanannya kurang ramah",
+            "answer-5": "Saya jarang menggunakan aplikasi ini",
+            "answer-6": "Saya ingin mengganti informasi akun social media saya"
+        },
+        "notice": {
+            "header": "Ketentuan penghapusan akun",
+            "item-1": "Setelah akun terhapus, semua data yang Anda miliki akan hilang ",
+            "item-2": "Data Anda (informasi pribadi, dll.) akan terhapus dan tidak bisa dipulihkan",
+            "item-3": "Setelah akun terhapus, ID Anda tidak dapat digunakan lagi"
+        },
+        "confirm": "Saya sudah baca semua instruksi dan setuju untuk penghapusan akun",
+        "button": "Hapus Akun",
+        "check-option": "Silakan periksa alasan penarikan.",
+        "check-confirm": "Silakan periksa persetujuan untuk penarikan."
+    },
+    "work-detail": {
+        "view-first": "Episode pertama",
+        "no-episodes": "Total {{no}} episodes",
+        "sort": {
+            "asc": "Dari yang pertama",
+            "desc": "Dari yang terbaru"
+        },
+        "paid": {
+            "free": "Gratis",
+            "none": "Tidak tersedia",
+            "rent": "Disewakan",
+            "buy": "Dimiliki"
+        }
+    },
+    "work-view": {
+        "button-prev": "Sebelumnya",
+        "button-next": "Lanjut",
+        "no-prev-episode": "Tidak ada episode sebelumnya",
+        "no-next-episode": "Tidak ada episode berikutnya",
+        "complete-pay-episode": "Pembelian Anda selesai.",
+        "error-pay-episode": "Sebuah kesalahan telah terjadi"
+    },
+    "customer-support": {
+        "tab-1": "Q&A",
+        "tab-2": "1:1 Penyelidikan",
+        "tab-3": "Detail penyelidikan",
+        "notices": [
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            }
+        ],
+        "inquiry": {
+            "faq": {
+                "header": "Q&A",
+                "contents": [
+                    {
+                        "q": "지금까지 구매한 웹툰은 어떻게 확인할 수 있나요?",
+                        "a": "구매한 작품 내역은 ‘메인 페이지 좌측 상단 메뉴 > 내 서재’ 또는 ‘하단 메뉴바 > 내 서재’ 를 통해 확인하실 수 있습니다.<br/><br/>‘내 서재’의 ‘구매한 작품’ 페이지에서 구매 작품 목록을 확인하실 수 있으며, 자세한 내역은 ‘더보기’ 버튼을 통해 확인하실 수 있습니다.<br/><br/>구매 작품은 소장과 대여로 분류됩니다. 대여 작품은 72시간의 대여로 이루어지기 때문에 구매일로 부터 72시간이 지난 경우 재 결제 해주셔야 열람이 가능합니다."
+                    },
+                    {
+                        "q": "ContentCoin 충전은 어떻게 하나요?",
+                        "a": "로그인 후 ‘메인 페이지 좌측 상단 메뉴 > ContentCoin 충전 배너’ 또는 ‘하단 메뉴 바 > 코인’ 을 통해 충전 가능합니다.<br/><br/>작품 결제 페이지에서 보유하신 ContentCoin이 부족하신 경우에는 노출되는 충전 팝업을 통해 충전 페이지로 이동이 가능합니다.<br/><br/>가상화폐인 ContentCoin의 시세 그래프는 ‘메인 페이지 좌측 상단 메뉴 > 실시간 토다’ 를 통해 확인하실 수 있습니다."
+                    },
+                    {
+                        "q": "환불은 어떻게 받을 수 있나요?",
+                        "a": "결제일로부터 30일 이내에 충전된 ContentCoin을 전혀 이용하지 않은 경우 환불 신청이 가능하오며, 작품 구매 후 잔여 ContentCoin은 환불이 불가능합니다.<br/><br/>*환불은 ContentCoin 환불만 가능합니다."
+                    },
+                    {
+                        "q": "회원 탈퇴는 어떻게 하나요?",
+                        "a": "‘메인 페이지 좌측 상단 메뉴 > 설정 > 회원 탈퇴’ 를 통해 탈퇴 하실 수 있습니다.<br/><br/>회원 탈퇴 시 결제하신 작품은 전부 소멸되며, 이전에 사용하시던 SNS 계정으로 재가입 하셔도 이전에 구입하셨던 작품은 복구가 되지 않는 점 참고 부탁드립니다."
+                    }
+                ]
+            },
+            "submit": {
+                "header": "Menanyakan",
+                "title-placeholder": "Harap masukkan judul (hingga 20 karakter)",
+                "content-placeholder": "Silakan masukkan detail pertanyaan Anda (dalam 300 karakter)",
+                "item-1": "Anda dapat memeriksa jawabannya dalam riwayat pertanyaan di atas.",
+                "item-2": "Kami akan melakukan yang terbaik untuk menanggapi Anda sesegera mungkin",
+                "button": "Daftar",
+                "title-error": "Harap masukkan judul.",
+                "content-error": "Silakan masukkan detail pertanyaan Anda."
+            },
+            "confirmation": "Permintaan Anda telah terdaftar."
+        },
+        "history": {
+            "waiting": "Menunggu",
+            "complete": "Lengkap"
+        }
+    },
+    "dialog": {
+        "detail": {
+            "header": "Bayar episode yang dipilih",
+            "button-rent": "Menyewa",
+            "button-rent.detail": "Tersedia selama 3 hari",
+            "button-buy": "Mengumpulkan",
+            "footer": "Membeli"
+        },
+        "login": {
+            "header": "Masuk/Daftar dengan akun Social Media"
+        },
+        "to-billing": {
+            "msg-1": "ContentCoin yang dibutuhkan untuk pembayaran tidak mencukupi",
+            "msg-2": "Apakah Anda ingin membebankan biaya ContentCoin?",
+            "button": "Mengisi"
+        },
+        "unsubscribe": {
+            "header": "Hapus Akun",
+            "content": "Data Anda (informasi pribadi, dll.) akan terhapus dan tidak bisa dipulihkan",
+            "button-cancel": "Membatalkan",
+            "button-confirm": "Konfirmasi"
+        },
+        "unsubscribe-error": {
+            "not-answered": "Silakan periksa alasan penarikan.",
+            "not-confirmed": "Silakan periksa persetujuan untuk penarikan."
+        },
+        "clear-cache": {
+            "button-cancel": "Membatalkan",
+            "button-confirm": "Konfirmasi",
+            "content": "Anda yakin ingin menghapus cache gambar?"
+        }
+    },
+    "error": {
+        "service-error": "Kesalahan Layanan",
+        "not-available": "Layanan saat ini dalam keadaan buruk.",
+        "sorry-for-inconvenience": "Kami mohon maaf atas ketidaknyamanan yang ditimbulkan.",
+        "use-after-while": "Silakan gunakan layanan setelah beberapa saat"
+    }
+}

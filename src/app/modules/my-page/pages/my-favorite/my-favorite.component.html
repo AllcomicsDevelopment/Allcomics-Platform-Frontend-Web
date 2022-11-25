@@ -1,0 +1,66 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div class="section column-layout my-favorite" >
+    <div class="list-comics pd-r-15 pd-l-15"  fxLayout="row wrap" *ngIf="(favorites$|async) && (favorites$|async).list.length > 0">
+        <ng-container *ngFor="let item of (favorites$|async).list">
+            <div class="comic-item pd-t-10 pd-b-10 isLike comic-item-32-45" fxFlex.lt-sm="33.33" fxFlex.md="25" fxFlex.sm="33.33" (click)="onShowDetail(item.id)">
+                <div class="comic-thumbnail">
+                    <div class="container-image container-image-32-45">
+                        <img class="object-fit_contain" [src]="item.thumbnail" [alt]="item.name">
+                    </div>
+                </div>
+                <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                    <div class="comic-detail">
+                        <h3>{{item.name}}</h3>
+<!--                        <p><span class="pir-trend icon-trend">{{ 'common.badge.updated' | translate }}</span><span class="date-time">{{ item.createdAt | date: 'yyyy.MM.dd' }}</span></p>-->
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <div class="my-page-loader" *ngIf="(isFetching$|async) && (page$|async) + 1 <= (totalPage$|async)">
+            <div class="loading" [ngStyle]="{ 'borderTopColor': '#46c1be', width: '30px', height: '30px' }"></div>
+        </div>
+    </div>
+    <!-- <div class="comic-item pd-t-10 pd-b-10 isLike comic-item-32-45" fxFlex.lt-sm="33.33" fxFlex.md="25" fxFlex.sm="33.33">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-32-45">
+                <img class="object-fit_contain" src="https://i.imgur.com/0clT33t.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>워너비 스타!</h3>
+                <p><span class="pir-trend icon-trend">UP</span><span class="date-time">2019-11-07</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="comic-item pd-t-10 pd-b-10 comic-item-32-45" fxFlex.lt-sm="33.33" fxFlex.md="25" fxFlex.sm="33.33">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-32-45">
+                <img class="object-fit_contain" src="https://i.imgur.com/Jp87Cgd.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>워너비 스타!</h3>
+                <p><span class="pir-trend icon-trend">UP</span><span class="date-time">2019-11-07</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="comic-item pd-t-10 pd-b-10 comic-item-32-45" fxFlex.lt-sm="33.33" fxFlex.md="25" fxFlex.sm="33.33">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-32-45">
+                <img class="object-fit_contain" src="https://i.imgur.com/Jp87Cgd.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>워너비 스타!</h3>
+                <p><span class="pir-trend icon-trend">UP</span><span class="date-time">2019-11-07</span></p>
+            </div>
+        </div>
+    </div>
+</div> -->
+</div>
+<div class="mrg-b-60"></div>
+<app-footer></app-footer>

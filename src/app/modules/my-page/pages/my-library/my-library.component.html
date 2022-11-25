@@ -1,0 +1,182 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div class="logined" fxLayout="row" fxLayoutAlign="space-between">
+    <div fxFlexOrder="1" fxLayout="row">
+        <div fxFlexOrder="1" *ngIf="(profile$|async) && profile.provider">
+            <ng-container [ngSwitch]="(profile).provider">
+                <ng-container *ngSwitchCase="'kakao'">
+                    <img src="assets/images/kakao.png">
+                </ng-container>
+                <ng-container *ngSwitchCase="'facebook'">
+                    <img src="assets/images/fackbook_.png">
+                </ng-container>
+                <ng-container *ngSwitchCase="'google'">
+                    <img src="assets/images/google.png">
+                </ng-container>
+                <ng-container *ngSwitchCase="'apple-id'">
+                    <img src="assets/images/apple-logo.svg">
+                </ng-container>
+                <ng-container *ngSwitchDefault>
+                    <img src="assets/images/icon_check.png">
+                </ng-container>
+            </ng-container>
+        </div>
+        <div fxFlexOrder="2">
+            <h6 *ngIf="(profile$|async) && (profile).user_name" >{{ (profile).user_name }}</h6>
+            <h6 *ngIf="(profile$|async) && !(profile.user_id > 0)" (click)="openLoginDialog()">{{ pleaseLoginText }}</h6>
+        </div>
+    </div>
+    <div fxFlexOrder="3" fxLayout="column" fxLayoutAlign="end end" *ngIf="isAuth" (click)="navigateToBilling()">
+        <p><span
+                *ngIf="(profile$|async)">{{ ((profile).balance | number) || '0' }}</span>{{ 'my-library.coin' | translate }}
+        </p>
+        <p class="button-coin">{{ 'my-library.billing' | translate }}</p>
+    </div>
+</div>
+<div class="tab-nav">
+    <nav>
+        <ul class="ul-nav" fxLayout="row" fxFlexFill fxLayoutAlign="center stretch">
+            <li fxFlexOrder="1" fxFlex="calc(100% / 3)">
+                <a (click)="navigateToNotice()">
+                    <div class="item-nav">
+                        <img src="assets/icons/notice.svg" alt="">
+                        <p>{{ 'my-library.icon-1' | translate }}</p>
+                    </div>
+                </a>
+            </li>
+            <li fxFlexOrder="2" fxFlex="calc(100% / 3)">
+                <a (click)="navigateToChargeHistory()">
+                    <div class="item-nav">
+                        <img src="assets/icons/history.svg" alt="">
+                        <p>{{ 'my-library.icon-2' | translate }}</p>
+                    </div>
+                </a>
+            </li>
+            <li fxFlexOrder="3" fxFlex="calc(100% / 3)">
+                <a [routerLink]="['/support']">
+                    <div class="item-nav">
+                        <img src="assets/icons/info.svg" alt="">
+                        <p>{{ 'my-library.icon-3' | translate }}</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="content-table pd-b-20 pd-l-10 pd-r-10">
+    <div class="section column-layout">
+        <div class="title-section" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3 class="myl">{{ 'my-library.list-1' | translate }}</h3>
+                <!-- <span class='font-small'>지금 당장 안 보면 후회할걸?</span> -->
+            </div>
+            <a (click)="navigateToPurchase()">
+                <div class="title-action font-small">{{ 'common.see-more' | translate }} ></div>
+            </a>
+        </div>
+        <ng-container *ngIf="!orders || orders.length === 0">
+            <div class="no-data">
+                <h6>{{ 'my-library.no-data' | translate }}</h6>
+            </div>
+        </ng-container>
+        <div class="list-comics" fxLayout="row wrap">
+            <div class="swiper-container" [swiper]="ordersConfig">
+                <div class="swiper-wrapper">
+                    <div *ngFor="let item of orders" class="swiper-slide popular-slide">
+                        <div class="comic-item pd-t-10 pd-b-10" fxFlex="100%" (click)="onShowDetail(item.id, item.contentType)">
+                            <div class="comic-thumbnail">
+                                <div class="container-image container-image-32-45">
+                                    <img class="object-fit_contain" [src]="item.thumbnail" [alt]="item.name">
+                                </div>
+                            </div>
+                            <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                <div class="comic-detail">
+                                    <h3 class="myl"><span class="short_title" [innerText]="item.name"></span></h3>
+                                    <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }}
+                                        <span>&nbsp;|&nbsp;</span>
+                                        {{ buyType(item.purchasedType) }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section column-layout">
+        <div class="title-section" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3 class="myl">{{ 'my-library.list-2' | translate }}</h3>
+                <!-- <span class='font-small'>지금 당장 안 보면 후회할걸?</span> -->
+            </div>
+            <a (click)="navigateToFavorite()">
+                <div class="title-action font-small">{{ 'common.see-more' | translate }} ></div>
+            </a>
+        </div>
+        <ng-container *ngIf="!favorites || favorites.length === 0">
+            <div class="no-data">
+                <h6>{{ 'my-library.no-data' | translate }}</h6>
+            </div>
+        </ng-container>
+        <div class="list-comics" fxLayout="row wrap">
+            <div class="swiper-container" [swiper]="favoriteConfig">
+                <div class="swiper-wrapper">
+                    <div *ngFor="let item of favorites" class="swiper-slide popular-slide">
+                        <div class="comic-item pd-t-10 pd-b-10" fxFlex="100%" (click)="onShowDetail(item.id, 'webtoon')">
+                            <div class="comic-thumbnail">
+                                <div class="container-image container-image-32-45">
+                                    <img class="object-fit_contain" [src]="item.thumbnail" [alt]="item.name">
+                                </div>
+                            </div>
+                            <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                <div class="comic-detail">
+                                    <h3 class="myl"><span class="short_title" [innerText]="item.name"></span></h3>
+                                    <!-- <p>51화 <span>&nbsp;|&nbsp;</span> 전체 이용가</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section column-layout">
+        <div class="title-section" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3 class="myl">{{ 'my-library.list-3' | translate }}</h3>
+                <!-- <span class='font-small'>지금 당장 안 보면 후회할걸?</span> -->
+            </div>
+            <!-- <div class="title-action font-small">{{ 'common.see-more' | translate }} ></div> -->
+        </div>
+        <ng-container *ngIf="!recentlyViewed || recentlyViewed.length === 0">
+            <div class="no-data">
+                <h6>{{ 'my-library.no-data' | translate }}</h6>
+            </div>
+        </ng-container>
+        <div class="list-comics" fxLayout="row wrap">
+            <div class="swiper-container" [swiper]="recentlyViewedConfig">
+                <div class="swiper-wrapper">
+                    <div *ngFor="let item of recentlyViewed" class="swiper-slide popular-slide">
+                        <div class="comic-item pd-t-10 pd-b-10" fxFlex="100%" (click)="onShowDetail(item.id, 'webtoon')">
+                            <div class="comic-thumbnail">
+                                <div class="container-image container-image-32-45">
+                                    <img class="object-fit_contain" [src]="item.thumbnails.vs" [alt]="item.name">
+                                </div>
+                            </div>
+                            <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                <div class="comic-detail">
+                                    <h3 class="myl"><span class="short_title" [innerText]="item.name"></span></h3>
+                                    <!-- <p>51화 <span>&nbsp;|&nbsp;</span> 전체 이용가</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mrg-b-60"></div>
+<app-footer [templateInfo]="templateInfo"></app-footer>

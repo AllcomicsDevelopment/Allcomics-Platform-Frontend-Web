@@ -1,0 +1,111 @@
+::ng-deep {
+    .mat-bottom-sheet-container {
+        padding: 0;
+    }
+    .bottom-dialog {
+        padding: 15px 15px 12px 15px;
+        span{
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+        
+        mat-form-field {
+            margin-bottom: 15px;
+            display: block !important;
+            &:after{
+                position: absolute;
+                display: inline-block;
+                content: url('/assets/icons/down-chevron.svg');
+                top: 15px;
+                right: 15px;
+                width: 15px;
+                font-weight: bold;
+                font-family: 'Nanum Gothic', sans-serif;
+            }
+        }
+        .mat-form-field-infix{
+            border: 1px solid black!important;
+            padding: 12px !important;
+            border-radius: 0;
+        }
+        .mat-form-field-underline{
+            display: none !important;
+        }
+        .mat-select-arrow{
+            border: none !important;
+        }
+        .mat-form-field-wrapper{
+            padding-bottom: 0 !important;
+        }
+        .mat-select-value-text{
+            span{
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 15px;
+            }
+        }
+        .mat-option-text{
+            font-family: 'Nanum Gothic', sans-serif !important;
+            font-size: 12px !important;
+        }
+        .mat-dialog-actions{
+            button{
+                margin: 0 auto;
+                color: #46C1BE;
+            }
+        }
+        .mat-checkbox-inner-container {
+            margin-right: 3px !important;
+        }
+    }
+}
+.total {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 17px 15px;
+    color: black;
+    z-index: 2;
+}
+table {
+    width: 100%;
+    box-shadow: none;
+    border-collapse: collapse;
+    padding: 0;
+    td {
+        vertical-align: middle;
+    }
+}
+
+.btn-purchase {
+    background-color: #46C1BE;
+    width: 100%;
+    padding: 17px 0;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+.qty-box {
+    span {
+        color: #060606;
+        font-family: sans-serif;
+        float: left;
+        line-height: 20px;
+        text-align: center;
+        width: calc(60px/3);
+        border: 1px solid gray;
+        -webkit-font-smoothing: antialiased;
+    }
+    span:nth-child(2) {
+        border-left: 0;
+        border-right: 0;
+    }
+    
+    .dec,
+    .inc {
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

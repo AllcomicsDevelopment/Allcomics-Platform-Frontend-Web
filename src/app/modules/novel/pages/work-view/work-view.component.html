@@ -1,0 +1,25 @@
+<ng-container *ngIf="(detailEpisode$|async)">
+    <app-header [templateInfo]="templateInfo" [controlState]="controlState" [episodeName]="(detailEpisode$|async).name || ''"></app-header>
+    <!-- <div class="mrg-t-45"></div> -->
+    <div *ngIf="(detailEpisode$|async).cuts && isAvailable">
+        <ng-container *ngFor="let cut of (detailEpisode$|async).cuts">
+            <img class="detail-img" [src]="cut" (click)="onContentTouch()">
+        </ng-container>
+    </div>
+    <!-- >>>>> CONTROL BAR <<<<< -->
+    <div class="control-bar" [@hideControl]=controlState fxLayout="row">
+        <div class="control-button" fxFlexOrder="1" fxFlex="45%">
+            <p (click)="onShowPrev()">&lt;&nbsp;&nbsp;{{ 'work-view.button-prev' | translate }}</p>
+        </div>
+        <div fxFlexOrder="2" fxFlex="10%">
+            <div class="divide"></div>
+        </div>
+        <div class="control-button" fxFlexOrder="3" fxFlex="45%">
+            <p (click)="onShowNext()">{{ 'work-view.button-next' | translate }}&nbsp;&nbsp;&gt;</p>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="!(detailEpisode$|async)">
+    <app-header [templateInfo]="templateInfo" [controlState]="controlState" [episodeName]="'Loading...'"></app-header>
+</ng-container>

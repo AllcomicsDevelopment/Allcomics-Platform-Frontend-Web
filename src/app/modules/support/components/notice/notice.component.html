@@ -1,0 +1,14 @@
+<div id="customer-notice" *ngIf="noticeList">
+    <mat-accordion>
+        <ng-container *ngFor="let item of noticeList.list">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header [collapsedHeight]="'63px'" [expandedHeight]="'63px'" >
+                    <mat-panel-title>{{ item.title }}</mat-panel-title>
+                    <mat-panel-description>{{ item.createdAt | date: 'yyyy.MM.dd' }}</mat-panel-description>
+                </mat-expansion-panel-header>
+                <div style="word-break: break-all;" [innerHtml]="item.content | safeHtml"></div>
+            </mat-expansion-panel>
+            <mat-divider></mat-divider>
+        </ng-container>
+    </mat-accordion>
+</div>

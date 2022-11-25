@@ -1,0 +1,20 @@
+<div id="customer-inquiry">
+    <ng-container *ngIf="faqList">
+        <mat-accordion>
+            <ng-container *ngFor="let faq of faqList.list">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <strong>Q</strong>{{ faq.title }}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="box-content" fxLayout="row" fxFlexFill>
+                        <div class="answer" fxFlex="7%"><strong>A</strong></div>
+                        <div class="content" fxFlex="90%" [innerHTML]="faq.content | safeHtml"></div>
+                    </div>
+                </mat-expansion-panel>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-accordion>
+    </ng-container>
+</div>

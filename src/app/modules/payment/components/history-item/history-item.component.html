@@ -1,0 +1,19 @@
+<div class="list-card-container">
+    <div class="list-card-icon">
+        <img src="assets/icons/tdn.svg">
+    </div>
+    <div class="list-card-detail-container">
+        <div class="list-card-title-wrapper">
+            <div class="list-card-title default-medium-font">
+                {{ 'billing.history-item.title' | translate:{ tdn: data.tdn } }}
+            </div>
+            <div class="list-card-description">
+                <span class="numeric-regular-font">{{ data.chargedAt | date: 'yyyy.MM.dd' }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="list-card-amount-wrapper numeric-regular-font">
+        <span>{{ data.amount}} {{ 'common.currency-name' | translate }}</span>
+    </div>
+
+</div>

@@ -1,0 +1,42 @@
+.bottom-dialog{
+    h5{
+        font-size: 16px;
+        margin: 10px 0 15px;
+    }
+    h4{
+        display: block;
+        width: 100%;
+        text-align: right;
+        font-size: 16px;
+        padding-top: 13px;
+        font-weight: 600;
+    }
+    .btn{
+        display: flex;
+        position: relative;
+        width: 100%;
+        align-items: center;
+        padding: 12px 10px;
+        border-radius: 3px;
+        margin-bottom: 8px;
+        border: 2px solid #EBEBEB;
+        h6{
+            font-size: 15px;
+            padding-right: 5px;
+        }
+        p{
+            font-size: 12px;
+        }
+        span{
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            font-size: 16px;
+            text-align: right;
+        }
+    }
+    .btn1{
+        color: white;
+        background: #1ED1CB;
+    }
+}

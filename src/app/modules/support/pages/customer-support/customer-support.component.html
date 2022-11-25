@@ -1,0 +1,35 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div id="customer-support" *ngIf="!(isAuthenticated$|async)">
+    <mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="onChangeTab($event)"
+        [animationDuration]="'10ms'">
+        <mat-tab label="{{ 'customer-support.tab-1' | translate }}">
+            <app-faq [faqList]="(faqList$|async)"></app-faq>
+        </mat-tab>
+        <mat-tab label="{{ 'customer-support.tab-2' | translate }}">
+            <app-inquiry (postInquiry)="onPostInquiry($event)"></app-inquiry>
+        </mat-tab>
+        <!--        <mat-tab label="{{ 'customer-support.tab-3' | translate }}">-->
+        <!--            <app-history [inquiryList]="(inquiryList$|async)"></app-history>-->
+        <!--        </mat-tab>-->
+        <!--        <mat-tab *ngIf="historyId" label="{{ 'customer-support.tab-3' | translate }}">-->
+        <!--            <app-history-detail [historyId]="historyId"></app-history-detail>-->
+        <!--        </mat-tab>-->
+    </mat-tab-group>
+</div>
+<div id="auth-customer-support" *ngIf="isAuthenticated$|async">
+    <mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="onChangeTab($event)"
+        [animationDuration]="'10ms'">
+        <mat-tab label="{{ 'customer-support.tab-1' | translate }}">
+            <app-faq [faqList]="(faqList$|async)"></app-faq>
+        </mat-tab>
+        <mat-tab label="{{ 'customer-support.tab-2' | translate }}">
+            <app-inquiry (postInquiry)="onPostInquiry($event)"></app-inquiry>
+        </mat-tab>
+        <mat-tab label="{{ 'customer-support.tab-3' | translate }}">
+            <app-history [inquiryList]="(inquiryList$|async)"></app-history>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+<div class="mrg-b-60"></div>
+<app-footer></app-footer>

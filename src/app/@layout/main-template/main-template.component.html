@@ -1,0 +1,62 @@
+<mat-sidenav-container fullscreen>
+    <!-- >>>>> SIDE <<<<< -->
+    <mat-sidenav #sidenav class="side-nav" id="wrapper-side-nav">
+        <div class="top-nav">
+            <h4 class="top-title-nav">{{ 'side-nav.my-information' | translate }}</h4>
+        </div>
+        <div class="logined" fxLayout="row" *ngIf="(profile$|async) && (profile.user_id >= 0)">
+            <div fxFlexOrder="1" fxFlex="100%">
+                <ng-container [ngSwitch]="profile.provider">
+                    <ng-container *ngSwitchCase="'kakao'">
+                        <img src="assets/images/kakao.png">
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'facebook'">
+                        <img src="assets/images/fackbook_.png">
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'google'">
+                        <img src="assets/images/google.png">
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'apple-id'">
+                        <img src="assets/images/apple-logo.svg">
+                    </ng-container>
+                    <ng-container *ngSwitchDefault>
+                        <img src="assets/images/icon_check.png">
+                    </ng-container>
+                </ng-container>
+            </div>
+            <div fxFlexOrder="2" fxFlex="100%"> //fxflex는 container의 너비를 결정하는 요소//
+                <h6 *ngIf="(profile$|async) && (profile.user_id >= 0)">{{ profile.user_name }}</h6>
+            </div>
+            <div fxFlexOrder="3" fxFlex="100%" fxLayoutAlign="end stretch">
+                <p (click)="onClicContentCoin()"><span *ngIf="(profile$|async) && (profile.user_id >= 0)">{{ profile.balance || '0' }}</span>{{ 'side-nav.coin' | translate }}</p>
+            </div>
+        </div>
+        <button (click)="route('auth/login')" *ngIf="!((profile$|async) && (profile.user_id >= 0))">{{ 'side-nav.login' | translate }}</button>
+        <ng-container *ngIf="(myPageBanner$|async)">
+            <img *ngIf="(myPageBanner$|async).items[0]"
+                 [src]="(myPageBanner$|async).items[0].imageUrl"
+                 alt="{{ (myPageBanner$|async).items[0].imageUrl }}"
+                 style="width: 100%"
+                 (click)="clickBanner()"
+            />
+        </ng-container>
+        <mat-list>
+            <mat-list-item (click)="route('mypage')" *ngIf="(profile$|async) && (profile.user_id >= 0)">
+                <img matListIcon class="icon-nav" src="assets/icons/side_1.png">
+                <p matLine>{{ 'side-nav.my-library' | translate }}</p>
+            </mat-list-item>
+            <mat-list-item (click)="route('support')">
+                <img matListIcon class="icon-nav" src="assets/icons/side_3.png">
+                <p matLine>{{ 'side-nav.customer-support' | translate }}</p>
+            </mat-list-item>
+            <mat-list-item (click)="route('home/setting')">
+                <img matListIcon class="icon-nav" src="assets/icons/side_4.png">
+                <p matLine>{{ 'side-nav.setting' | translate }}</p>
+            </mat-list-item>
+        </mat-list>
+        <button (click)="doLogout()" *ngIf="(profile$|async) && (profile.user_id >= 0)">{{ 'side-nav.logout' | translate }}</button>
+    </mat-sidenav>
+    <mat-sidenav-content class="content bg-white main-container">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

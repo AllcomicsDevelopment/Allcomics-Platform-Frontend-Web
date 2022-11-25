@@ -1,0 +1,48 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div id="wrapper-webtoon" (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)">
+    <mat-tab-group #tabGroup dynamicHeight="false"
+                   [(selectedIndex)]="selectedIndex"
+                   [@.disabled]="true"
+                   (selectedTabChange)="changeTab($event)"
+                   [animationDuration]="'10ms'">
+        <mat-tab *ngFor="let tab of tabs" label="index">
+            <ng-template mat-tab-label>
+                <p>{{ tab.name | translate }}</p>
+            </ng-template>
+            <div (touchstart)="swipe($event, 'start')"
+                 (touchend)="swipe($event, 'end')">
+<!--                <div id="ads-section" *ngIf="banner">
+                    <img [src]="banner.items[0].imageUrl"
+                         (click)="onClickBanner(banner.items[0].link)"
+                         alt="{{ banner.items[0].imageUrl }}" />
+                </div>-->
+                <div class="content-table pd-lr-15">
+                    <div class="section column-layout">
+                        <div class="list-comics" fxLayout="row wrap">
+                            <div class="comic-item pd-t-10 pd-b-10" fxFlex.lt-sm="50" fxFlex.md="25" fxFlex.sm="50" *ngFor="let item of (webtoonList$|async)" (click)="onDetail(item.id)">
+                                <div class="comic-thumbnail">
+                                    <div class="container-image container-image-1-1">
+                                        <img class="object-fit_contain" [src]="item.thumbnail.sq" alt="{{ item.name }}">
+                                    </div>
+<!--                                    <div class="triangle triangle-main" *ngIf="item.isNew"><p>{{ 'common.new' | translate }}</p></div>-->
+                                </div>
+                                <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                    <div class="comic-detail">
+                                        <h3 class="wbt"><span class="short_title">{{ item.name }} </span> <!--<span *ngIf="item.trend" class="icon-trend" [ngClass]="{ 'pir-trend': item.trend == 'UP', 'red-trend': item.trend != 'UP' }">{{ item.trend }}</span>--></h3>
+                                        <p>{{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }} <span>&nbsp;|&nbsp;</span> {{ item.postDay | date: 'yyyy-MM-dd' }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-loader" *ngIf="(isFetching$|async) && (page$|async) + 1 <= (totalPage$|async)">
+                                <div class="loading" [ngStyle]="{ 'borderTopColor': '#46c1be', width: '30px', height: '30px' }"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+<div class="mrg-b-60"></div>
+<app-footer></app-footer>

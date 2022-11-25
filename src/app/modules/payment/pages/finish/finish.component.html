@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="finish-header">
+        <h4 class="top-title-style-2">{{ 'header.billing' | translate }}</h4>
+        <img class="right-button-close" src="assets/icons/close.svg">
+    </div>
+    <div class="wrapper" style="height: 100%">
+        <div class="box-3">
+            <div class="bg-white" id="wrapper-billing">
+                <b>
+                    <p>{{ 'billing.amount' | translate }}</p>
+                    <span class="c-green">{{ amount$ | async | number }} {{ 'common.currency-name' | translate }}</span>
+                </b>
+                <img class="icon-check" src="assets/images/icon_check.png">
+            </div>
+            <div class="divider"></div>
+        </div>
+        <div class="box-3 pd-lr-15">
+            <b><p>{{ 'billing.payment-information' | translate }}</p></b>
+            <div class="input-container" *ngIf="cardNum">
+                <app-pay-icon [cardNum]="cardNum"></app-pay-icon>
+                <input class="input-form" type="tel"
+                       placeholder="**** **** **** ****"
+                       [(ngModel)]="cardNum"
+                       autocomplete="cc-number"
+                       [disabled]="true"
+                       ccNumber>
+            </div>
+        </div>
+    </div>
+    <div class="button-wrapper">
+        <button class="payment-button" (click)="onClickFinish()">{{ 'billing.confirm' | translate }}</button>
+    </div>
+</div>

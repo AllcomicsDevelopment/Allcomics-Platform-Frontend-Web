@@ -1,0 +1,14 @@
+:host {
+
+    .text-container {
+        padding: 8px 16px 28px 16px;
+        background-color: #FAFAFA;
+        height: 100%;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+}

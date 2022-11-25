@@ -1,0 +1,86 @@
+<div [ngSwitch]="templateInfo.topbar">
+    <!-- >>>>> TOP BAR <<<<< -->
+    <!-- home page -->
+    <div class="top-bar-style-1" fxFlexOrder="1" *ngSwitchCase="1">
+        <img class="left-button-style-1" src="assets/icons/menu.svg" (click)="toggleSidebar()">
+<!--        <img class="top-logo" src="assets/images/ldpi.png">-->
+        <h4 class="top-title">
+            <span class="title-text" [ngClass]="{'active': this.router.url === '/home'}" (click)="onGoTo('/home')">{{ 'header.title_webtoon' | translate }}</span>
+            <span class="title-text">  |  </span>
+            <span class="title-text" [ngClass]="{'active': this.router.url === '/home/novel'}" (click)="onGoTo('/home/novel')"> {{ 'header.title_webnovel' | translate }}</span>
+        </h4>
+        <img class="right-button-search" src="assets/icons/searchB.svg" (click)="onSearch()">
+    </div>
+    <!-- home page -->
+
+    <!-- my favorite -->
+    <div class="top-bar-style-1" fxFlexOrder="1" *ngSwitchCase="2">
+        <img class="left-button" src="assets/icons/backB.svg" (click)="onGoBack()">
+        <h4 class="top-title">{{ 'header.' + templateInfo.txtTitle | translate }}</h4>
+<!--        <span class="right-button" (click)="filterLike($event)">{{ 'header.' + templateInfo.txtRight | translate }}</span>-->
+    </div>
+    <!-- my favorite -->
+
+    <!-- my page -->
+    <div class="top-bar-style-1" fxFlexOrder="1" *ngSwitchCase="3">
+        <img class="left-button" src="assets/icons/backB.svg" (click)="onGoBack()">
+        <h4 class="top-title">{{ 'header.' + templateInfo.txtTitle | translate }}</h4>
+    </div>
+    <!-- my page -->
+
+    <!-- login page -->
+    <div class="top-bar-style-1" fxFlexOrder="1" *ngSwitchCase="4">
+        <img class="left-button" src="assets/icons/backB.svg" (click)="onGoBack()">
+        <h4 class="top-title">{{ 'header.' + templateInfo.txtTitle | translate }}</h4>
+    </div>
+    <!-- login page -->
+
+    <!-- search page -->
+    <div class="top-bar-style-2" fxFlexOrder="1" *ngSwitchCase="5">
+        <img class="left-button" src="assets/icons/backW.svg" (click)="onGoBack()">
+        <input class="input-top" placeholder="{{ 'search.placeholder' | translate }}"
+               (keyup)="onChangeKeyWord($event)"
+               (keyup.enter)="doSearch()">
+        <img class="right-button-search" src="assets/icons/searchW.svg" (click)="doSearch()">
+    </div>
+    <!-- search page -->
+
+    <!-- view page -->
+    <div class="top-bar-style-2" fxFlexOrder="1" *ngSwitchCase="6" [@hideTop]=controlState >
+        <img class="left-button" src="assets/icons/backW.svg" (click)="onGoBack()">
+        <h4 class="top-title-style-2">{{ episodeName }}</h4>
+    </div>
+    <!-- view page -->
+
+    <!-- setting page -->
+    <div class="top-bar-style-2" fxFlexOrder="1" *ngSwitchCase='7'>
+        <img class="left-button" src="assets/icons/backW.svg" (click)="onGoBack()">
+        <h4 class="top-title-style-2">{{ 'header.' + templateInfo.txtTitle | translate }}</h4>
+    </div>
+    <!-- setting page -->
+
+    <!-- idol page -->
+    <div class="top-bar-style-3" fxFlexOrder="1" *ngSwitchCase='8'>
+        <img class="left-button" src="assets/icons/backW.svg" (click)="onGoBack()">
+    </div>
+    <!-- idol page -->
+
+    <!-- detail page -->
+    <div class="top-bar-style-1" fxFlexOrder="1" *ngSwitchDefault>
+        <img class="left-button" src="assets/icons/backB.svg" (click)="onGoBack()">
+        <h4 class="top-title">{{titleName}}</h4>
+        <mat-icon class="right-icon" (click)="onFavorite(!isFollow)" [ngClass]="isFollow ? 'green-fill' : 'white-fill'">{{ isFollow ? 'star' : 'star_border' }}</mat-icon>
+    </div>
+    <!-- detail page -->
+
+    <div class="top-bar-style-1" fxFlexOrder="1" *ngSwitchCase="10">
+        <img class="left-button-style-1" src="assets/icons/menu.svg" (click)="toggleSidebar()">
+        <!--        <img class="top-logo" src="assets/images/ldpi.png">-->
+        <h4 class="top-title">
+            <span class="title-text" [ngClass]="{'active': this.router.url === '/genres/webtoon'}" (click)="onGoTo('/genres/webtoon')">{{ 'header.title_webtoon' | translate }}</span>
+            <span class="title-text">  |  </span>
+            <span class="title-text" [ngClass]="{'active': this.router.url === '/genres/novel'}" (click)="onGoTo('/genres/novel')"> {{ 'header.title_webnovel' | translate }}</span>
+        </h4>
+        <img class="right-button-search" src="assets/icons/searchB.svg" (click)="onSearch()">
+    </div>
+</div>

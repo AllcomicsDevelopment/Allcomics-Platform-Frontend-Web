@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>올코믹스</title>
+        <link>https://app.allcomics.co.kr/</link>
+        <description>올코믹스 웹툰 서비스</description>
+        <item>
+            <title>홈</title>
+            <link>https://app.allcomics.co.kr/home</link>
+            <description>올코믹스 메인 페이지</description>
+        </item>
+        <item>
+            <title>카테고리</title>
+            <link>https://app.allcomics.co.kr/webtoon</link>
+            <description>올코믹스 장르별 웹툰 페이지</description>
+        </item>
+        <item>
+            <title>충전</title>
+            <link>https://app.allcomics.co.kr/payment</link>
+            <description>올코믹스 포인트 충전 페이지</description>
+        </item>
+        <item>
+            <title>마이페이지</title>
+            <link>https://app.allcomics.co.kr/mypage</link>
+            <description>올코믹스 마이 페이지</description>
+        </item>
+    </channel>
+</rss>

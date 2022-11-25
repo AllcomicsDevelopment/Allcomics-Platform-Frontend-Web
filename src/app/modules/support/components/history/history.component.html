@@ -1,0 +1,32 @@
+<div id="customer-history" *ngIf="inquiryList">
+    <div class="padding-10">
+        <mat-accordion>
+            <ng-container *ngFor="let item of inquiryList.list">
+                <mat-expansion-panel [hideToggle]="true" (afterExpand)="onAfterExpand(item)">
+                    <mat-expansion-panel-header [collapsedHeight]="'63px'" [expandedHeight]="'63px'">
+                        <div class="box-item" fxLayout="row" fxFlexFill fxLayoutAlign="start stretch">
+                            <div fxFlex="25%" class="box-item__label">
+                                <span *ngIf="item.status !== 'replied'">{{ 'customer-support.history.waiting' | translate }}</span>
+                                <span class="green" *ngIf="item.status === 'replied'">{{ 'customer-support.history.complete' | translate }}</span>
+                            </div>
+                            <div class="text-left box-item-wrapper">
+                                <div class="box-item__content">
+                                    <h4 class="title">{{ item.title }}</h4>
+                                    <span class="date">{{ item.createdAt | date: 'yyyy-MM-dd' }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-expansion-panel-header>
+                    <div [innerHtml]="item.content | safeHtml"></div>
+                    <ng-container *ngIf="getDetailMessage(item) && getDetailMessage(item).reply">
+                        <div class="box-content" style="padding-top: 15px" fxLayout="row" fxFlexFill>
+                            <div class="answer" style="font-family: 'Nanum Gothic', 'sans-serif'; color: #46c1be; font-size: 18px;" fxFlex="7%"><strong>A</strong></div>
+                            <div class="content" fxFlex="90%" [innerHTML]="getDetailMessage(item).reply.content | safeHtml"></div>
+                        </div>
+                    </ng-container>
+                </mat-expansion-panel>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-accordion>
+    </div>
+</div>

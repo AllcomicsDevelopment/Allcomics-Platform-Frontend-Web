@@ -1,0 +1,27 @@
+<div fxLayout="column" fxFlexFill fxLayoutAlign="start stretch">
+    <app-header [templateInfo]="templateInfo"></app-header>
+    <div class="mrg-t-45"></div>
+    <div class="box-1 pd-lr-15" fxFlexOrder="1" fxFlex="1 2 auto">
+        <p><b>{{ 'unsubscribe.poll.question' | translate }}</b></p>
+        <div class="box-3">
+            <div class="pd-lr-15">
+                <mat-checkbox color="primary" (change)="onChange($event, 'inconvenience')"><span class="mini">{{ 'unsubscribe.poll.answer-1' | translate }}</span></mat-checkbox>
+                <mat-checkbox color="primary" (change)="onChange($event, 'contents')"><span class="mini">{{ 'unsubscribe.poll.answer-2' | translate }}</span></mat-checkbox>
+                <mat-checkbox color="primary" (change)="onChange($event, 'expensive')"><span class="mini">{{ 'unsubscribe.poll.answer-3' | translate }}</span></mat-checkbox>
+                <mat-checkbox color="primary" (change)="onChange($event, 'unfriendly')"><span class="mini">{{ 'unsubscribe.poll.answer-4' | translate }}</span></mat-checkbox>
+                <mat-checkbox color="primary" (change)="onChange($event, 'unattractive')"><span class="mini">{{ 'unsubscribe.poll.answer-5' | translate }}</span></mat-checkbox>
+                <mat-checkbox color="primary" (change)="onChange($event, 'account')"><span class="mini">{{ 'unsubscribe.poll.answer-6' | translate }}</span></mat-checkbox>
+            </div>
+        </div>
+    </div>
+    <div class="box-3 pd-lr-15" fxFlexOrder="2">
+        <div class="bg-white">
+            <p><b>{{ 'unsubscribe.notice.header' | translate }}</b></p>
+            <span class="mini pd-t-5 pd-b-5">·  {{ 'unsubscribe.notice.item-1' | translate }}</span>
+            <span class="mini pd-t-5 pd-b-5">·  {{ 'unsubscribe.notice.item-2' | translate }}</span>
+            <span class="mini pd-t-5 pd-b-15">·  {{ 'unsubscribe.notice.item-3' | translate }}</span>
+            <mat-checkbox color="primary" (change)="onChangeConfirm($event)"><span class="mini">{{ 'unsubscribe.confirm' | translate }}</span></mat-checkbox>
+            <button mat-flat-button (click)="openDialog()">{{ 'unsubscribe.button' | translate }}</button>
+        </div>
+    </div>
+</div>

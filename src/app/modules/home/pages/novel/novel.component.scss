@@ -1,0 +1,144 @@
+.img-responsive {
+    width: 100%;
+}
+
+.title-action{
+    font-size: 12px;
+}
+
+.policy-container {
+    padding: 0px 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-address {
+    white-space: pre;
+}
+
+// added by louis
+.comic-detail {
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    .badge-wrapper {
+        margin-top: 5px;
+    }
+
+    p {
+        font-weight: lighter;
+    }
+}
+
+
+::ng-deep {
+
+    .swiper-container {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .slider-homepage {
+        width: 100%;
+
+        .swiper-pagination {
+            text-align: left;
+        }
+        span.swiper-pagination-bullet-active {
+            background: transparent!important;
+            border: 2px solid white;
+        }
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 100%;
+            background: #fff;
+            opacity: 1;
+        }
+    }
+    .slider-type-2 {
+        .swiper-slide {
+            max-width: 16.7%!important;
+            width: 100%!important;
+        }
+    }
+
+    .slider-type-3 {
+        .swiper-slide {
+            max-width: 16.7%!important;
+            width: 100%!important;
+        }
+    }
+
+}
+// ads-idol
+.price-ads {
+    .old-price {
+        margin-left: 5px;
+        color: #9e9e9e;
+        text-decoration: line-through;
+    }
+}
+.sale-percent span {
+    color: red;
+}
+
+#footer-main {
+    border-top: 2px solid #dadada;
+    text-align: center;
+    margin: 10px;
+    padding: 22px 0;
+    font-size: 13px;
+    .footer-down {
+        width: 16px;
+        margin: 12px auto 14px;
+        display: block;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        &.footer-up {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+        }
+    }
+    .top-footer {
+        p {
+            font-size: 14px;
+        }
+    }
+    p, a {
+        padding: 2px 0 3px;
+        font-weight: lighter;
+        text-decoration: none;
+        color: black;
+        font-size: 11px;
+    }
+    span {
+        line-height: 20px;
+        color:#949494;
+        font-size: 13px;
+    }
+
+    .divider {
+        height: 1px;
+        background-color: #dadada;
+        margin: 15px 30px;
+    }
+
+    .extra-footer-top {
+        font-size: 14px;
+        margin: 7px;
+    }
+}

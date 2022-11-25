@@ -1,0 +1,133 @@
+<ng-container *ngIf="comicDetail">
+    <app-header [templateInfo]="templateInfo"
+                [titleId]="comicDetail.id"
+                [titleName]="(comicDetail && comicDetail.name) ? comicDetail.name : ''"
+                [isFollow]="comicDetail.isFavorite"
+    >
+    </app-header>
+    <div class="mrg-t-45"></div>
+    <div class="detail-info">
+        <div class="detail-thumbnail">
+            <div class="container-image container-image-4-3">
+                <img class="esp-thumnail object-fit_contain" [src]="comicDetail.image" alt="{{ comicDetail.name }}">
+            </div>
+        </div>
+        <div class="pd-lr-15 detail-text">
+            <h6 [innerText] = "comicDetail.name"></h6>
+            <span>{{ getTranslateGenre(comicDetail.genres) }} ㅣ
+                <ng-container *ngIf="comicDetail.age > 0">{{ 'common.age-over' | translate:{ age: comicDetail.age } }}</ng-container>
+                <ng-container *ngIf="!(comicDetail.age > 0)">{{ 'common.all-age' | translate:{ age: comicDetail.age } }}</ng-container>
+            </span>
+            <p [innerHtml] = "comicDetail.description | safeHtml"></p>
+            <button mat-flat-button
+                    *ngIf="episodes && episodes.length > 0"
+                    (click)="checkFirstRoute()">
+                {{ 'work-detail.view-first' | translate }}
+            </button>
+        </div>
+    </div>
+    <div class="list-esp">
+        <div id="wrapper-detail" class="pd-lr-15 list-topbar" fxLayout="row" fxFlexFill fxLayoutAlign="start stretch">
+            <p fxFlexOrder="1" fxFlex="50%">{{ 'work-detail.no-episodes' | translate:{ no: comicDetail.validEpisodeCount } }}</p>
+            <mat-form-field fxFlexOrder="2" fxFlex="50%" fxLayoutAlign="end start">
+                <mat-select [(value)]="selected">
+                    <mat-option value="option1" (click)="changeSort(comicDetail.id + '', 'asc')">{{ 'work-detail.sort.asc' | translate }}</mat-option>
+                    <mat-option value="option2" (click)="changeSort(comicDetail.id + '', 'desc')">{{ 'work-detail.sort.desc' | translate }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="list-area" *ngIf="episodes">
+            <ng-container *ngFor="let item of episodes; let i = index">
+                <div class="pd-lr-15 esp-item" [ngClass]="{ 'gray': item.isViewed }"
+                     fxLayout="row" fxFlexFill fxLayoutAlign="start stretch" (click)="checkRoute(item)">
+<!--                    <div class="esp-thumnail" fxFlexOrder="1" fxFlex="90px">-->
+                    <div class="esp-thumnail" fxFlexOrder="1" fxFlex="65px">
+                        <div class="container-image container-image-32-45">
+                            <img class="esp-thumnail" [src]="item.thumbnail"  [alt]="item.name"/>
+                        </div>
+                    </div>
+                    <div class="esp-info" fxFlexOrder="2" fxFlex="calc(100% - 90px)">
+                        <div fxFlexOrder="1" fxFlex="70%" class="pd-l-15 part1" fxFlexAlign="center">
+                            <h6>{{ item.name }}<p *ngIf="item.isNew">N</p></h6>
+                            <span>{{ item.createdAt | date: 'yyyy.MM.dd' }}</span>
+                        </div>
+                        <div fxFlexOrder="2" fxFlex="30%" class="part2" fxFlexAlign="center">
+                            <p [ngClass]="{ 'green': item.isFree }">
+                                {{ (item.isFree ? 'work-detail.paid.free' : item.isPurchased ? (item.expiredAt > 0 ? 'work-detail.paid.rent': 'work-detail.paid.buy') : 'work-detail.paid.none') | translate }}
+                            </p>
+<!--                            <span *ngIf="item.expiresAt">item.payment.expiresAt</span>-->
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <div class="loader" *ngIf="(isFetching$|async) && (episodePage$|async) + 1 <= (episodeTotalPage$|async)">
+                <div class="loading small-loader" [ngStyle]="{ 'borderTopColor': '#46c1be', width: '25px', height: '25px' }"></div>
+            </div>
+
+
+            <!-- <div class="pd-lr-15 esp-item gray" fxLayout="row" fxFlexFill fxLayoutAlign="start stretch" (click)="openBottom()">
+                <div class="esp-thumnail" fxFlexOrder="1" fxFlex="90px">
+                    <div class="container-image container-image-32-45">
+                        <img class="esp-thumnail" src="https://i.imgur.com/ymxLOi8.png" >
+                    </div>
+                </div>
+                <div class="esp-info" fxFlexOrder="2" fxFlex="calc(100% - 90px)">
+                    <div fxFlexOrder="1" fxFlex="50%" class="pd-l-15 part1" fxFlexAlign="center">
+                        <h6>제 1화</h6>
+                        <span>2019.01.02</span>
+                    </div>
+                    <div fxFlexOrder="2" fxFlex="50%" class="part2" fxFlexAlign="center">
+                        <p class="green">무료</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pd-lr-15 esp-item" fxLayout="row" fxFlexFill fxLayoutAlign="start stretch" (click)="openBillingDialog()">
+                <div class="esp-thumnail" fxFlexOrder="1" fxFlex="90px">
+                    <div class="container-image container-image-32-45">
+                        <img class="esp-thumnail" src="https://i.imgur.com/ymxLOi8.png" >
+                    </div>
+                </div>
+                <div class="esp-info" fxFlexOrder="2" fxFlex="calc(100% - 90px)">
+                    <div fxFlexOrder="1" fxFlex="50%" class="pd-l-15 part1" fxFlexAlign="center">
+                        <h6>제 1화<p>N</p></h6>
+                        <span>2019.01.02</span>
+                    </div>
+                    <div fxFlexOrder="2" fxFlex="50%" class="part2" fxFlexAlign="center">
+                        <p class="green">무료</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pd-lr-15 esp-item" fxLayout="row" fxFlexFill fxLayoutAlign="start stretch">
+                <div class="esp-thumnail" fxFlexOrder="1" fxFlex="90px">
+                    <div class="container-image container-image-32-45">
+                        <img class="esp-thumnail" src="https://i.imgur.com/ymxLOi8.png" >
+                    </div>
+                </div>
+                <div class="esp-info" fxFlexOrder="2" fxFlex="calc(100% - 90px)">
+                    <div fxFlexOrder="1" fxFlex="50%" class="pd-l-15 part1" fxFlexAlign="center">
+                        <h6>제 1화</h6>
+                        <span>2019.01.02</span>
+                    </div>
+                    <div fxFlexOrder="2" fxFlex="50%" class="part2" fxFlexAlign="center">
+                        <p>대여 중</p>
+                        <span>2일 12시간</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="!comicDetail">
+    <app-header [templateInfo]="templateInfo"
+                [titleId]="''"
+                [titleName]="'Loading...'"
+                [isFollow]="false"
+    >
+    </app-header>
+    <div class="app-splash-screen">
+        <div class="app-splash-screen-content">
+            <div class="loading" [ngStyle]="{ 'borderTopColor': '#46c1be' }"></div>
+        </div>
+    </div>
+</ng-container>

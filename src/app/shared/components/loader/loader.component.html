@@ -1,0 +1,5 @@
+<div class="app-splash-screen" *ngIf="(isLoading$ | async)">
+    <div class="app-splash-screen-content">
+        <div id="loading" [ngStyle]="{ 'borderTopColor': borderColor }"></div>
+    </div>
+</div>

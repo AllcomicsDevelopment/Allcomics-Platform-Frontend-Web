@@ -1,0 +1,18 @@
+<div class="bottom-dialog">
+    <h5>{{ 'dialog.detail.header' | translate }}</h5>
+    <div class="btn" [ngClass]="{ 'btn1': activeIndex === 1 }" (click)="changeStatus(1)">
+        <h6>{{ 'dialog.detail.button-rent' | translate }}</h6>
+        <p>({{ 'dialog.detail.button-rent.detail' | translate }})</p>
+        <span>
+            {{ data.displayPrice?.rent }} ContentCoin
+        </span>
+    </div>
+    <div class="btn" [ngClass]="{ 'btn1': activeIndex === 2 }" (click)="changeStatus(2)">
+        <h6>{{ 'dialog.detail.button-buy' | translate }}</h6>
+        <span>
+            {{ data.displayPrice?.buy }} ContentCoin
+<!--            {{ getContentCoinPrice(data.price?.currency, data.price?.buy).price }} {{ getContentCoinPrice(data.price?.currency, data.price?.buy).target }}-->
+        </span>
+    </div>
+    <h4 (click)="onOk()" style="cursor: pointer">{{ 'dialog.detail.footer' | translate }}</h4>
+</div>

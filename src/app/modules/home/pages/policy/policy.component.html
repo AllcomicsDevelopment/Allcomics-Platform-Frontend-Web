@@ -1,0 +1,10 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div class="text-container">
+    <ng-container *ngFor="let list of privacy">
+        <div class="title-content font-medium" style="margin-bottom: 30px">
+            <h3>{{ list.title }}</h3>
+            <span class="font-small" style=" white-space: pre-line;">{{ list.description }}</span>
+        </div>
+    </ng-container>
+</div>

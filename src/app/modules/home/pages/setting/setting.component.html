@@ -1,0 +1,47 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div>
+    <div class='section-block' [ngClass]="!isAuthenticated ? 'section-feedback-block' : ''">
+        <p>{{ 'setting.account' | translate }}</p>
+        <span class='txt-detail' *ngIf="isAuthenticated && profile">{{ profile.Account.name }}</span>
+        <span class='txt-detail' *ngIf="!isAuthenticated" (click)="openLoginDialog()">{{ pleaseLoginText }}</span>
+    </div>
+    <div class='section-block' fxLayout fxLayoutAlign="space-between" *ngIf="isAuthenticated">
+        <div class="">
+            <p>{{ 'setting.event' | translate }}</p>
+            <span class='txt-detail'>{{ 'setting.event.detail' | translate }}</span>
+        </div>
+        <div class="">
+            <mat-slide-toggle color="primary" [checked]="isChecked" (toggleChange)="onChangeToggle()"></mat-slide-toggle>
+        </div>
+    </div>
+<!--    <div class='section-block' (click)="clearCache()">-->
+<!--        <p>{{ 'setting.image-cache' | translate }}</p>-->
+<!--        <span class='txt-detail'>{{ randomCachedSize | number : '1.2-2' }} MB</span>-->
+<!--        <div class="absolute-touch"></div>-->
+<!--    </div>-->
+    <div class='section-block'>
+        <p>{{ 'setting.app-version' | translate }}</p>
+        <span class='txt-detail'>{{ appVersion }}</span>
+        <div class="absolute-touch"></div>
+    </div>
+    <div class='section-block section-feedback-block' *ngIf="isAuthenticated">
+        <p>{{ 'setting.unsubscribe' | translate }}</p>
+        <div class="absolute-touch" [routerLink]="['/auth/unsubscribe']"></div>
+    </div>
+    <div id='wrapper-language' class='section-block'>
+        <div class="">
+            <p>{{ 'setting.language' | translate }}</p>
+        </div>
+        <div class="select-language">
+            <mat-form-field>
+                <mat-select [(value)]="selectedLanguage">
+                    <mat-option value="ko" (click)="onChangeLanguage()">한국어</mat-option>
+                    <mat-option value="es" (click)="onChangeLanguage()">Español</mat-option>
+                    <mat-option value="en" (click)="onChangeLanguage()">English</mat-option>
+                    <mat-option value="id" (click)="onChangeLanguage()">Bahasa Indonesia</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

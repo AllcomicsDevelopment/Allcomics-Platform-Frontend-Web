@@ -1,0 +1,75 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div class="row-layout" id="wrapper-purchase">
+    <div class="title-section pd-l-15 pd-r-15" fxLayout fxLayoutAlign="space-between">
+        <div class="title-content">
+            <p *ngIf=(orders) >{{ 'purchase-list.no-purchased' | translate:{ no: orders.length } }}</p>
+            <!-- <span class='font-small'>지금 당장 안 보면 후회할걸?</span> -->
+        </div>
+        <mat-form-field fxFlexOrder="2" fxFlex="30%" fxLayoutAlign="end start">
+            <mat-select [(ngModel)]="selected" (selectionChange)="onChange($event)">
+                <mat-option *ngFor="let option of orderOptions" [value]="option">
+                    {{ 'purchase-list.sort.' + option | translate }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="list-comics pd-lr-15" *ngIf="(purchased$|async) && (purchased$|async).list.length > 0">
+        <ng-container *ngFor="let item of (purchased$|async).list">
+            <div class="comic-item purchase-item" fxLayout fxLayoutAlign="start">
+                <div class="comic-thumbnail">
+                    <div class="container-image container-image-3-2">
+                        <img class="object-fit_contain" [src]="item.thumbnail" [alt]="item.name">
+                    </div>
+                </div>
+                <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                    <div class="comic-detail">
+                        <h3>{{item.name}}</h3>
+<!--                        <p>{{ 'purchase-list.no-buy' | translate:{ no: item.buyEpisodeCount } }}-->
+<!--                            <span *ngIf="item.rentEpisodeCount > 0">({{ 'purchase-list.no-rent' | translate: { no: item.rentEpisodeCount } }})</span>-->
+<!--                        </p>-->
+                        <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }}
+                            <span>&nbsp;|&nbsp;</span>
+                            {{ buyType(item.purchasedType) }}
+                        </p>
+                        <p>{{ item.purchasedAt | date: 'yyyy-MM-dd' }}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <div class="my-page-loader" *ngIf="(isFetching$|async) && (page$|async) + 1 <= (totalPage$|async)">
+            <div class="loading" [ngStyle]="{ 'borderTopColor': '#46c1be', width: '30px', height: '30px' }"></div>
+        </div>
+    </div>
+    <!-- <div class="comic-item purchase-item" fxLayout fxLayoutAlign="start">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-3-2">
+                <img class="object-fit_contain" src="https://i.imgur.com/hpypsxg.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>1초 뒤에 결혼해줄게</h3>
+                <p>40화 소장중</p>
+                <p>2019-04-24</p>
+            </div>
+        </div>
+    </div>
+    <div class="comic-item purchase-item" fxLayout fxLayoutAlign="start">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-3-2">
+                <img class="object-fit_contain" src="https://i.imgur.com/a8g7V0f.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>화려한 결혼</h3>
+                <p>40화 소장중</p>
+                <p>2019-04-24</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+</div>
+<div class="mrg-b-60"></div>
+<app-footer></app-footer>

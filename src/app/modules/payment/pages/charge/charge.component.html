@@ -1,0 +1,178 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+
+<div class="wrapper bg-gray" style="height: 100%">
+    <div class="box-3">
+        <div class="bg-white" id="wrapper-billing">
+            <b>
+                <p>{{ 'billing.amount' | translate }}</p>
+                <span class="c-green">{{ (amount$ | async) | number }} {{ 'common.currency-name' | translate }}</span>
+            </b>
+        </div>
+    </div>
+    <div class="box-2 pd-lr-10">
+        <div class="default-box bg-white ng-star-inserted">
+            <div class="box-text">{{ 'billing.input-card-info' | translate }}</div>
+            <div class="pd-t-30 box-text">
+                <div class="pd-b-5">{{ 'billing.card-number' | translate }}</div>
+                <div class="input-container">
+                    <app-pay-icon [cardNum]="cardNum"></app-pay-icon>
+                    <input class="input-form" type="tel"
+                           placeholder="**** **** **** ****"
+                           [(ngModel)]="cardNum"
+                           maxlength="27"
+                           autocomplete="cc-number"
+                           ccNumber>
+                </div>
+            </div>
+            <div class="pd-t-15 box-text input-wrapper">
+                <div class="first-input-box">
+                    <div class="pd-b-5">{{ 'billing.card-expired' | translate }}</div>
+                    <input class="input-form" placeholder="MM / YYYY" type="tel"
+                           [(ngModel)]="cardExpireDate"
+                           autocomplete="cc-exp"
+                           ccExp>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-2 pd-lr-10">
+        <div class="default-box bg-white ng-star-inserted">
+            <div class="box-text">{{ 'billing.input-user-info' | translate }}</div>
+            <div class="pd-t-30 box-text input-wrapper">
+                <div class="first-input-box">
+                    <div class="pd-b-5">{{ 'billing.name' | translate }}</div>
+                    <input class="input-form" type="text" placeholder="{{ 'billing.placeholder.last-name' | translate}}" [(ngModel)]="lastName">
+                </div>
+                <div>
+                    <div class="pd-b-5">&nbsp;</div>
+                    <input class="input-form" type="text" placeholder="{{ 'billing.placeholder.first-name' | translate}}" [(ngModel)]="firstName">
+                </div>
+            </div>
+            <div class="pd-t-15 box-text">
+                <div class="pd-b-5">{{ 'billing.email' | translate }}</div>
+                <input class="input-form" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="{{ 'billing.placeholder.email' | translate}}" [(ngModel)]="email">
+            </div>
+            <div class="pd-t-15 box-text input-wrapper">
+                <div class="first-input-box">
+                    <div class="pd-b-5">{{ 'billing.country' | translate }}</div>
+                    <mat-form-field>
+                        <mat-select [(value)]="country">
+                            <mat-option value="KO" (click)="resetForm()">South Korea</mat-option>
+                            <mat-option value="US" (click)="resetForm()">United States</mat-option>
+                            <mat-option value="BR" (click)="resetForm()">República Federativa do Brasil</mat-option>
+                            <mat-option value="CA" (click)="resetForm()">Canada</mat-option>
+                            <mat-option value="MX" (click)="resetForm()">México</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div *ngIf="country === 'US'">
+                    <div class="pd-b-5">{{ 'billing.administrative-area' | translate }}</div>
+                    <mat-form-field>
+                        <mat-select [(value)]="administrativeArea">
+                            <mat-option value="AL">Alabama</mat-option>
+                            <mat-option value="AK">Alaska</mat-option>
+                            <mat-option value="AS">American Samoa</mat-option>
+                            <mat-option value="AZ">Arizona</mat-option>
+                            <mat-option value="AR">Arkansas</mat-option>
+                            <mat-option value="CA">California</mat-option>
+                            <mat-option value="CO">Colorado</mat-option>
+                            <mat-option value="CT">Connecticut</mat-option>
+                            <mat-option value="DE">Delaware</mat-option>
+                            <mat-option value="DC">District of Columbia</mat-option>
+                            <mat-option value="FM">Federated States of Micronesia</mat-option>
+                            <mat-option value="FL">Florida</mat-option>
+                            <mat-option value="GA">Georgia</mat-option>
+                            <mat-option value="GU">Guam</mat-option>
+                            <mat-option value="HI">Hawaii</mat-option>
+                            <mat-option value="ID">Idaho</mat-option>
+                            <mat-option value="IL">Illinois</mat-option>
+                            <mat-option value="IN">Indiana</mat-option>
+                            <mat-option value="IA">Iowa</mat-option>
+                            <mat-option value="KS">Kansas</mat-option>
+                            <mat-option value="KY">Kentucky</mat-option>
+                            <mat-option value="LA">Louisiana</mat-option>
+                            <mat-option value="ME">Maine</mat-option>
+                            <mat-option value="MH">Marshall Islands</mat-option>
+                            <mat-option value="MD">Maryland</mat-option>
+                            <mat-option value="MA">Massachusetts</mat-option>
+                            <mat-option value="MI">Michigan</mat-option>
+                            <mat-option value="MN">Minnesota</mat-option>
+                            <mat-option value="MS">Mississippi</mat-option>
+                            <mat-option value="MO">Missouri</mat-option>
+                            <mat-option value="MT">Montana</mat-option>
+                            <mat-option value="NE">Nebraska</mat-option>
+                            <mat-option value="NV">Nevada</mat-option>
+                            <mat-option value="NH">New Hampshire</mat-option>
+                            <mat-option value="NJ">New Jersey</mat-option>
+                            <mat-option value="NM">New Mexico</mat-option>
+                            <mat-option value="NY">New York</mat-option>
+                            <mat-option value="NC">North Carolina</mat-option>
+                            <mat-option value="ND">North Dakota</mat-option>
+                            <mat-option value="MP">Northern Mariana Islands</mat-option>
+                            <mat-option value="OH">Ohio</mat-option>
+                            <mat-option value="OK">Oklahoma</mat-option>
+                            <mat-option value="OR">Oregon</mat-option>
+                            <mat-option value="PW">Palau</mat-option>
+                            <mat-option value="PA">Pennsylvania</mat-option>
+                            <mat-option value="PR">Puerto Rico</mat-option>
+                            <mat-option value="RI">Rhode Island</mat-option>
+                            <mat-option value="SC">South Carolina</mat-option>
+                            <mat-option value="SD">South Dakota</mat-option>
+                            <mat-option value="TN">Tennessee</mat-option>
+                            <mat-option value="TX">Texas</mat-option>
+                            <mat-option value="UT">Utah</mat-option>
+                            <mat-option value="VT">Vermont</mat-option>
+                            <mat-option value="VI">Virgin Islands</mat-option>
+                            <mat-option value="VA">Virginia</mat-option>
+                            <mat-option value="WA">Washington</mat-option>
+                            <mat-option value="WV">West Virginia</mat-option>
+                            <mat-option value="WI">Wisconsin</mat-option>
+                            <mat-option value="WY">Wyoming</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div *ngIf="country === 'CA'">
+                    <div class="pd-b-5">{{ 'billing.administrative-area' | translate }}</div>
+                    <mat-form-field>
+                        <mat-select [(value)]="administrativeArea">
+                            <mat-option value="AB">Alberta</mat-option>
+                            <mat-option value="BC">British Columbia</mat-option>
+                            <mat-option value="MB">Manitoba</mat-option>
+                            <mat-option value="NB">New Brunswick</mat-option>
+                            <mat-option value="NL">Newfoundland and Labrador</mat-option>
+                            <mat-option value="NS">Nova Scotia</mat-option>
+                            <mat-option value="NT">Northwest Territories</mat-option>
+                            <mat-option value="NU">Nunavut</mat-option>
+                            <mat-option value="ON">Ontario</mat-option>
+                            <mat-option value="PE">Prince Edward Island</mat-option>
+                            <mat-option value="QC">Quebec</mat-option>
+                            <mat-option value="SK">Saskatchewan</mat-option>
+                            <mat-option value="YT">Yukon</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="pd-t-15 box-text">
+                <div class="pd-b-5">{{ 'billing.locality' | translate }}</div>
+                <input class="input-form" type="text" [(ngModel)]="locality">
+            </div>
+            <div class="pd-t-15 box-text">
+                <div class="pd-b-5">{{ 'billing.address' | translate }}</div>
+                <input class="input-form" type="text" [(ngModel)]="address">
+            </div>
+            <div class="pd-t-15 box-text" *ngIf="country === 'US'">
+                <div class="pd-b-5">{{ 'billing.postal-code' | translate }}</div>
+                <input class="input-form" type="text" [textMask]="{ mask: getPostalCodeMask(country) }" placeholder="12345-6789" [(ngModel)]="postalCode">
+            </div>
+            <div class="pd-t-15 box-text" *ngIf="country === 'CA'">
+                <div class="pd-b-5">{{ 'billing.postal-code' | translate }}</div>
+                <input class="input-form" type="text" [textMask]="{ mask: getPostalCodeMask(country) }" placeholder="A1B 2C3" [(ngModel)]="postalCode">
+            </div>
+        </div>
+    </div>
+    <div class="button-wrapper bg-gray">
+        <button class="payment-button" (click)="onClickPayment()">{{ 'billing.payment' | translate }}</button>
+    </div>
+</div>
+

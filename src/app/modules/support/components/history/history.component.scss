@@ -1,0 +1,81 @@
+#customer-history {
+    .title{
+        font-size: 14px;
+        font-weight: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+    .date{
+        display: block;
+        padding-top: 6px;
+        font-size: 14px;
+    }
+    .green {
+        color: #46C1BE;
+    }
+    .box-item-wrapper {
+        margin-left: 10px;
+        overflow: hidden;
+    }
+
+    .box-item {
+        font-size: 13px;
+        padding: 8px 0;
+
+        &__label {
+            text-align: left;
+            margin-top: 3px;
+
+            span {
+                text-align: center;
+                background: #153a39;
+                display: inline-block;
+                padding: 8px;
+                color: #fff;
+                border-radius: 3px;
+                width: 100%;
+                font-size: 12px;
+                &.green {
+                    background: #46C1BE;
+                }
+            }
+        }
+    }
+    .mat-divider {
+        margin-bottom: 0;
+    }
+    .mat-list-base {
+        padding-top: 0;
+        .mat-list-item {
+            height: 63px;
+            padding: 0px 16px 0px 0;
+            .mat-list-item-content {
+                padding: 0;
+            }
+        }
+    }
+
+    .box-item__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+}
+.mat-form-field.mat-focused {
+    .mat-form-field-label {
+        color: #46C1BE;
+    }
+}
+.mat-form-field-appearance-outline, .mat-form-field-appearance-outline.mat-focused {
+    .mat-form-field-outline-thick {
+        color: #46C1BE;
+    }
+}
+//
+//.mat-expansion-panel-header {
+//  padding: 0px 15px 0px 0px !important;
+//}
+

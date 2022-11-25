@@ -1,0 +1,65 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div class="wrapper bg-gray">
+    <div class="bg-white box-1">
+        <p *ngIf="(isAuthenticated$|async) && (profile$|async)">{{ 'billing.BL001' | translate }} <span class="c-green">© <b>{{ (contentcoin$ | number) || '0' }}</b></span></p>
+        <p *ngIf="!(isAuthenticated$|async)" (click)="openLoginDialog()">{{ pleaseLoginText }}</p>
+    </div>
+    <div class="box-2 pd-lr-10">
+        <h6>{{ 'billing.BL002' | translate }}</h6>
+        <div class="bg-white box-2-list" *ngIf="coinCharging">
+            <ng-container *ngFor="let item of coinCharging; let i = index">
+                <div class="box-2-item" fxLayout="row" fxFlexFill fxLayoutAlign="start stretch" (click)="onItemClick(item, i)">
+                    <div fxFlexOrder="1" fxFlex="65%">
+                        <p>
+                            <span class="c-green">© </span>
+                            {{ item.targetPrice | number }} {{ item.targetCurrency }}
+                            <span *ngIf="item.targetBonus !== 0" style="color: #46C1BE;margin-left: 10px;font-weight: bold !important;">+ {{ item.targetBonus | number }}</span>
+                            <span class="after" *ngIf="activeIndex === i && item.targetBonus !== 0"></span>
+                            <span class="after-no-bonus" *ngIf="activeIndex === i && item.targetBonus === 0"></span>
+                        </p>
+                    </div>
+                    <div fxFlexOrder="2" fxFlex="35%" fxLayoutAlign="end stretch">
+                        <span class="chip">{{ 'common.currency-symbol' | translate }}{{ item.price | number }}</span>
+                    </div>
+                </div>
+                <mat-divider *ngIf="i < coinCharging.length"></mat-divider>
+            </ng-container>
+        </div>
+    </div>
+    <div class="box-3 pd-lr-10">
+        <div class="bg-white" id="wrapper-billing">
+            <p>{{ 'billing.BL003' | translate }}</p>
+            <div class="coin-container">
+                <img src="assets/images/icon_allcomics.png" style="height: 44px;">
+                <div class="selected-coin" *ngIf="coin">
+                    <span class="target-price">{{ (coin.targetPrice + coin.targetBonus) | number }} {{ coin.targetCurrency }}</span>
+                    <span class="c-green" style="font-weight: bold">{{ coin.price | number }} {{ 'common.currency-name' | translate }}</span>
+                </div>
+            </div>
+            <mat-form-field>
+                <mat-select [(ngModel)]="selectedBillOptions" (selectionChange)="onBillOptionsChange($event)">
+                    <mat-option *ngFor="let option of billOptions" [value]="option">
+                        {{ 'billing.options.' + option | translate }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="box-3 pd-lr-10">
+        <div class="bg-white">
+            <p>{{ 'billing.BL005' | translate }}</p>
+            <span class="mini pd-t-5 pd-b-5">· {{ 'billing.BL006' | translate }}</span>
+            <span class="mini pd-t-10 pd-b-10">· {{ 'billing.BL007' | translate }}</span>
+            <mat-checkbox color="primary"
+                          [(ngModel)]="isApproved">
+                <span class="mini">{{ 'billing.BL008' | translate }}</span>
+            </mat-checkbox>
+            <mat-checkbox color="primary"
+                          [(ngModel)]="isSavePayment">
+                <span class="mini">{{ 'billing.BL009' | translate }}</span>
+            </mat-checkbox>
+            <button mat-flat-button (click)="openDialog()">{{ 'billing.BL010' | translate }}</button>
+        </div>
+    </div>
+</div>

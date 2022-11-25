@@ -1,0 +1,106 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="img-thumbnail-idol-item">
+    <img class="thumbnail-product" src="https://i.imgur.com/zpvZ1DX.jpg" alt="">
+</div>
+<div class="pd-lr-15">
+    <div class="product-main-info">
+        <div class="product-title font-medium pd-t-15 pd-b-20"><p>레드벨벳 - THE RED SUMMER</p></div>
+        <div class="product-price font-medium"><span class="product-new-price">11% 50 ContentCoin</span><span class="product-old-price">55 TDN</span></div>
+        <div class="product-note font-small"><span><strong>배송정보 :</strong> 12/31(화) 도착 예정  l  약 21일</span></div>
+    </div>
+</div>
+<div id="wrapper-idol" class="bg-white">
+    <div class="tabs">
+        <mat-tab-group>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p>상세설명</p>
+                </ng-template>
+                <div class="list-image-product">
+                    <img src="https://i.imgur.com/zC3aTvq.jpg" alt="">
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p>구매정보</p>
+                </ng-template>
+                <div class="section pd-lr-10">
+                    <!-- Shipping Method -->
+                    <div class="title-description"><p><strong>배송 정보</strong></p></div>
+                    <table  class="mat-elevation-z8">
+
+                        <!--- Note that these columns can be defined in any order.
+                                The actual rendered columns are set as a property on the row definition" -->
+
+                        <!-- Position Column -->
+                        <tr>
+                            <td>대표자/브랜드</td>
+                            <td width="60%">홍길동 / A코퍼레이션</td>
+                        </tr>
+                        <tr>
+                            <td>사업자번호</td>
+                            <td>12345678</td>
+                        </tr>
+                        <tr>
+                            <td>통신사판매신고번호</td>
+                            <td>1234-대한민국-5678</td>
+                        </tr>
+                        <tr>
+                            <td>연락처</td>
+                            <td>+82)070.1234.5678</td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td>12345678@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>영업소재지</td>
+                            <td>대한민국 서울시 관악구</td>
+                        </tr>
+                    </table>
+                    <div class="title-description"><p><strong>배송 정보</strong></p></div>
+                    <table  class="mat-elevation-z8">
+
+                        <!--- Note that these columns can be defined in any order.
+                                The actual rendered columns are set as a property on the row definition" -->
+
+                        <!-- Position Column -->
+                        <tr>
+                            <td>크기/무게</td>
+                            <td width="60%">상단표기</td>
+                        </tr>
+                        <tr>
+                            <td>색상</td>
+                            <td>검정색</td>
+                        </tr>
+                        <tr>
+                            <td>제조사</td>
+                            <td>A코퍼레이션</td>
+                        </tr>
+                        <tr>
+                            <td>수입여부</td>
+                            <td>Y</td>
+                        </tr>
+                        <tr>
+                            <td>제조국</td>
+                            <td>한국</td>
+                        </tr>
+                        <tr>
+                            <td>제조년월</td>
+                            <td>2019/12/31</td>
+                        </tr>
+                        <tr>
+                            <td>A/S 책임자</td>
+                            <td>홍길동 +82)070.1234.5678</td>
+                        </tr>
+                        <tr>
+                            <td>취급시 주의사항</td>
+                            <td>제품 이상 시 공정거래위원회 고시 소비자분쟁해결기준에 의거 보상합니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
+<div class="btn-purchase font-medium" (click)="openBottom()">구매하기</div>

@@ -1,0 +1,33 @@
+::ng-deep {
+  #customer-notice {
+    .mat-tab-labels {
+      justify-content: space-around;
+      .mat-tab-label {
+        height: 34px;
+      }
+      .mat-tab-label-active {
+        color: #46c1be;
+      }
+    }
+    mat-ink-bar {
+      display: none;
+    }
+    .top-bar-style-1 {
+      position: relative;
+    }
+    mat-expansion-panel {
+      &.mat-expanded {
+        background: #f1f1f1;
+      }
+      .mat-content {
+        display: block;
+        .mat-expansion-panel-header-description {
+          font-size: 12px;
+        }
+      }
+    }
+    .mat-tab-label .mat-tab-label-content {
+      font-weight: bold;
+    }
+  }
+}

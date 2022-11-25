@@ -1,0 +1,79 @@
+.ios-toggle {
+    position:absolute;
+    top:-5000px;
+    height:0;
+    width:0;
+    opacity:0;
+    border:none;
+    outline:none;
+    &:active {
+        @extend .ios-toggle;
+    }
+    &:checked + .checkbox-label {
+        box-shadow: inset 0 0 0 18px #46c1be, 0 0 0 1px #46c1be;
+        &:before {
+            left: calc(100% - 20px);
+            box-shadow: 0 0 0 1px transparent, 0 3px 3px rgba(0, 0, 0, 0.3);
+        }
+        &:after {
+            left:60px;
+            width:36px;
+        }
+    }
+}
+
+.checkbox-label {
+    display: block;
+    position: relative;
+    padding: 10px;
+    font-size: 12px;
+    margin-left: 30px;
+    line-height: 16px;
+    width: 40px;
+    height: 20px;
+    border-radius: 18px;
+    background: #bfbfbf;
+    cursor: pointer;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        line-height: 19px;
+        text-indent: 40px;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        top: 0px;
+        left: 0px;
+        right: auto;
+        background: white;
+    }
+    &:after {
+        display:block;
+        position:absolute;
+        z-index:0;
+        top:0;
+        left:-300px;
+        padding:10px;
+        height:100%;
+        width:300px;
+        text-align:right;
+        color:#bfbfbf;
+        white-space:nowrap;
+    }
+}
+
+#checkbox + .checkbox-label{
+    /*box-shadow*/
+    -webkit-box-shadow: inset 0 0 0 0px #ffffff, 0 0 0 1px #dddddd;
+    -moz-box-shadow: inset 0 0 0 0px #ffffff, 0 0 0 1px #dddddd;
+    box-shadow: inset 0 0 0 0px #ffffff, 0 0 0 1px #dddddd
+}
+#checkbox:checked + .checkbox-label{
+    /*box-shadow*/
+    box-shadow:inset 0 0 0 18px #46c1be,0 0 0 1px #46c1be;
+    &:after {
+        color:#46c1be;
+    }
+}

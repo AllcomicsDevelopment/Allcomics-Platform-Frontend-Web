@@ -1,0 +1,18 @@
+.dialog-content{
+  text-align: justify !important;
+  padding-top: 0px !important;
+}
+.button-actions{
+  display: block !important;
+  text-align: right;
+  padding-top: 15px;
+  text-align: center;
+  span{
+    padding: 0 !important;
+    min-width: auto;
+    line-height: 20px;
+    font-size: 15px;
+    color: #46C1BE;
+    font-weight: bold;
+  }
+}

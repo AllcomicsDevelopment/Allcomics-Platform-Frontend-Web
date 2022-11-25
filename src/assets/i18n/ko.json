@@ -1,0 +1,481 @@
+{
+    "common": {
+        "currency": "KRW",
+        "currency-symbol": "￦",
+        "currency-name": "원",
+        "genre": {
+            "romance": "로맨스",
+            "drama": "드라마",
+            "action": "소년/액션",
+            "fantasy": "판타지",
+            "blgl": "BL/GL",
+            "manga": "성인",
+            "challenges": "베도"
+        },
+        "week": {
+            "mon": "월",
+            "tue": "화",
+            "wed": "수",
+            "thu": "목",
+            "fri": "금",
+            "sat": "토",
+            "sun": "일",
+            "com": "완결"
+        },
+        "buy_type": {
+            "buy": "소장중",
+            "rent": "대여중"
+        },
+        "no-episodes": "{{no}}화",
+        "all-age": "전체 이용가",
+        "age-over": "{{age}}세 이용가",
+        "see-more": "더보기",
+        "badge": {
+            "discount": "할인",
+            "completed": "완결",
+            "recommended": "강추",
+            "updated": "UP"
+        },
+        "button-confirm": "확인",
+        "new": "NEW",
+        "coming-soon": "준비 중입니다."
+    },
+    "side-nav": {
+        "my-information": "내 정보",
+        "login": "로그인/회원가입",
+        "coin": "ContentCoin",
+        "my-library": "내 서재",
+        "toda-now": "실시간 토다",
+        "customer-support": "고객 지원",
+        "setting": "환경설정",
+        "logout": "로그아웃"
+    },
+    "header": {
+        "login": "로그인",
+        "billing": "ContentCoin 충전",
+        "setting": "환경설정",
+        "customerSupport": "고객 지원",
+        "notice": "공지 사항",
+        "customerSupportHistoryDetail": "고객 지원",
+        "unsubscribe": "회원탈퇴",
+        "main": "main",
+        "detail": "",
+        "webtoon": "장르별 웹툰",
+        "mylib": "내 서재",
+        "purchase": "구매 목록",
+        "myfavorite": "관심 작품",
+        "event": "이벤트",
+        "delete": "삭제",
+        "history": "충전 내역",
+        "policy": "이용 약관",
+        "privacy": "개인정보처리방침",
+        "youthpolicy": "청소년보호정책",
+        "title_webtoon": "웹툰",
+        "title_webnovel": "웹소설"
+    },
+    "main": {
+        "week": {
+            "header": "요일별 웹툰",
+            "header-novel": "요일별 웹소설"
+        },
+        "ranking": {
+            "header": "실시간 랭킹",
+            "description": "지금 당장 안 보면 후회할걸?"
+        },
+        "popular": {
+            "header": "인기 추천 작품"
+        },
+        "new-update": {
+            "header": "오늘의 신작"
+        },
+        "idol-goods": {
+            "header": "아이돌 상품",
+            "description": "구매 가능한 아이돌 굿즈!"
+        },
+        "hot-romance": {
+            "header": "도전! 밀리언 웹툰",
+            "header-novel": "도전! 밀리언 소설",
+            "description": "연애하고 싶어지는 달콤한 이야기"
+        },
+        "hot-bl-picks": {
+            "header": "핫한 BL 추천작",
+            "description": "잘생긴 청년들의 사랑"
+        },
+        "cheap-sale": {
+            "header": "오늘만 무료 작품",
+            "header-novel": "오늘만 무료 작품"
+        },
+        "footer": {
+            "top": "(주)웹툰티비 사업자정보",
+            "contact": "문의전화",
+            "email": "이메일 문의",
+            "address": "주소",
+            "address-content": "서울시 마포구 성암로 330, DMC첨단산업센터\n608-1호",
+            "tel": "02-6243-6242"
+        },
+        "extra-footer": {
+            "top": "기술제공 및 운영사업자정보",
+            "title": {
+                "name": "상호",
+                "english-name": "영문 상호",
+                "registration-number": "사업자등록번호",
+                "email": "이메일 문의",
+                "phone": "전화 문의",
+                "address": "주소"
+            },
+            "content": {
+                "name": "(주)토다큐지에스씨",
+                "english-name": "TODAQ GSC Inc.",
+                "registration-number": "197-86-01189",
+                "email": "helpdesk@todaq.net",
+                "phone": "02-3213-8188",
+                "address": "경기도 성남시 분당구 판교역로 192번길 14, 305호\n(삼평동, 리치투게더센터)"
+            }
+        }
+    },
+    "footer": {
+        "home": "홈",
+        "page": "장르별",
+        "bill": "충전",
+        "user": "내 서재"
+    },
+    "search": {
+        "placeholder": "제목 / 키워드를 검색해주세요",
+        "result": "검색된 작품은 총 {{no}}건 입니다."
+    },
+    "login": {
+        "header": "SNS 계정으로 로그인/가입",
+        "kakao": "카카오로 로그인",
+        "google": "구글로 로그인",
+        "apple": "Apple로 로그인"
+    },
+    "billing": {
+        "BL001": "내 보유 포인트 ContentCoin",
+        "BL002": "충전하실 금액을 선택하세요.",
+        "BL003": "결제 금액을 확인해주세요.",
+        "BL004": "수단변경",
+        "BL005": "결제 상품 이용안내",
+        "BL006": "대여권, 소장권을 구매한 작품은 구매 취소하거나 환불을 받을 수 없습니다.",
+        "BL007": "결제에 대한 자세한 문의는 고객지원 페이지에서 문의해주시기 바랍니다.",
+        "BL008": "(필수)위 내용을 확인하였으며 구매진행에 동의합니다.",
+        "BL009": "(선택)이 결제수단으로 추후 결제 이용에 동의합니다.",
+        "BL010": "결제요청",
+        "options": {
+            "card": "신용카드"
+        },
+        "alert": {
+            "coin": "결제 금액을 선택해주세요.",
+            "approve": "구매 진행에 동의해주세요"
+        },
+        "amount": "결제 금액",
+        "payment-information": "결제 정보",
+        "input-card-info": "카드 정보를 입력해주세요.",
+        "card-number": "카드번호",
+        "card-expired": "유효기간",
+        "card-cvv": "CVV",
+        "input-user-info": "결제자 정보를 입력해주세요.",
+        "name": "이름",
+        "email": "이메일",
+        "country": "나라",
+        "locality": "지역",
+        "address": "주소",
+        "administrative-area": "행정 구역",
+        "postal-code": "우편 번호",
+        "payment": "결제하기",
+        "placeholder": {
+            "first-name": "이름",
+            "last-name": "성",
+            "email": "email@address.com"
+        },
+        "confirm": "확인",
+        "alert-message": "모든 내용을 입력해주세요.",
+        "history-asc": "오래된 순",
+        "history-desc": "최신 순",
+        "history-item": {
+            "title": "ContentCoin 충전 ({{tdn}} ContentCoin)"
+        }
+    },
+    "my-library": {
+        "coin": "ContentCoin",
+        "billing": "충전",
+        "icon-1": "공지 사항",
+        "icon-2": "충전 내역",
+        "icon-3": "고객 지원",
+        "list-1": "구매한 작품",
+        "list-2": "관심 작품",
+        "list-3": "최근 본 작품",
+        "no-data": "해당 데이터가 없습니다."
+    },
+    "history-detail": {
+        "complete": "답변완료",
+        "waiting": "답변대기"
+    },
+    "purchase-list": {
+        "no-purchased": "전체 {{no}}개",
+        "sort": {
+            "updated": "업데이트 순",
+            "popular": "인기 순",
+            "name": "제목 순",
+            "desc": "최신 순",
+            "asc": "오래된 순"
+        },
+        "no-buy": "{{no}}화 소장중",
+        "no-rent": "{{no}}화 대여중"
+    },
+    "setting": {
+        "account": "내 계정 & 정보",
+        "event": "이벤트 혜택 알림",
+        "event.detail": "이벤트 정보를 받을 수 있습니다.",
+        "image-cache": "이미지 캐시 삭제",
+        "app-version": "현재 버전 정보",
+        "unsubscribe": "회원탈퇴",
+        "language": "언어 / Language",
+        "please-login": "로그인을 해주세요."
+    },
+    "unsubscribe": {
+        "poll": {
+            "question": "탈퇴 사유는 무엇인가요?",
+            "answer-1": "서비스 이용이 불편하고 오류가 많습니다.",
+            "answer-2": "이용 가능한 콘텐츠가 부족합니다.",
+            "answer-3": "콘텐츠의 가격이 부담스럽습니다.",
+            "answer-4": "서비스에 불친절함을 느꼈습니다.",
+            "answer-5": "어플리케이션의 사용 빈도가 낮습니다.",
+            "answer-6": "SNS계정 정보 변경을 하고 싶습니다."
+        },
+        "notice": {
+            "header": "회원 탈퇴 안내사항",
+            "item-1": "회원 탈퇴 시 보유하고 계신 작품은 모두 소멸됩니다.",
+            "item-2": "탈퇴한 계정의 데이터(개인정보 등)은 삭제되어 복구가 불가능합니다.",
+            "item-3": "회원 탈퇴 후 기존의 아이디는 더 이상 사용하실 수 없습니다."
+        },
+        "confirm": "안내 사항을 모두 확인하였으며, 이에 동의하여 계정을 삭제합니다.",
+        "button": "회원 탈퇴",
+        "check-option": "탈퇴 사유 체크 확인해주세요.",
+        "check-confirm": "탈퇴 동의 체크 확인해주세요."
+    },
+    "work-detail": {
+        "view-first": "첫 화보기",
+        "no-episodes": "총 {{no}}화",
+        "sort": {
+            "asc": "첫 화부터",
+            "desc": "최신 화부터"
+        },
+        "paid": {
+            "free": "무료",
+            "none": "구매 전",
+            "rent": "대여 중",
+            "buy": "소장 중"
+        }
+    },
+    "work-view": {
+        "button-prev": "이전 화",
+        "button-next": "다음 화",
+        "no-prev-episode": "이전 화가 없습니다.",
+        "no-next-episode": "다음 화가 없습니다.",
+        "complete-pay-episode": "구매가 완료되었습니다.",
+        "error-pay-episode": "에러가 발생했습니다."
+    },
+    "customer-support": {
+        "tab-1": "자주 묻는 질문",
+        "tab-2": "1:1 문의",
+        "tab-3": "문의 내역",
+        "notices": [
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            },
+            {
+                "title": "올코믹스 런칭 안내",
+                "date": "2019-11-11",
+                "content": "글로벌 웹툰 플랫폼 올코믹스가 오픈 했습니다.<br/><br/>올코믹스는 글로벌 웹툰 플랫폼이라는 명칭에 맞게 다양한 작품을 생산, 유통하여 회원 여러분들께 풍족한 즐거움을 선보일 예정입니다.앞으로 많은 관심과 이용을 부탁드립니다.<br/><br/>감사합니다."
+            },
+            {
+                "title": "ContentCoin에 관하여",
+                "date": "2019-11-11",
+                "content": "ContentCoin이란 토다큐에서 발행한 가상화폐이며, 간단히 ContentCoin 이라는 이름의 코인 시스템입니다.<br/><br/>구매하신 ContentCoin으로 올코믹스 내 모든 작품과 상품을 자유롭게 이용하실 수 있습니다."
+            },
+            {
+                "title": "로그인 이벤트 진행 안내",
+                "date": "2019-11-11",
+                "content": "올코믹스 오픈에 관심을 갖고 이용을 해주시는 회원 여러분을 위해 ContentCoin 지급 이벤트를 진행합니다.<br/><br/>SNS 계정 첫 로그인 시 약 10편의 웹툰을 보실 수 있는 20 ContentCoin을 지급해 드리오니 원하시는 작품의 화차를 마음껏 이용해주세요.<br/><br/>*ContentCoin이란 코인 시스템을 대체한 가상화폐이며, 올코믹스 내에서만 사용이 가능합니다."
+            }
+        ],
+        "inquiry": {
+            "faq": {
+                "header": "자주 묻는 질문",
+                "contents": [
+                    {
+                        "q": "지금까지 구매한 웹툰은 어떻게 확인할 수 있나요?",
+                        "a": "구매한 작품 내역은 ‘메인 페이지 좌측 상단 메뉴 > 내 서재’ 또는 ‘하단 메뉴바 > 내 서재’ 를 통해 확인하실 수 있습니다.<br/><br/>‘내 서재’의 ‘구매한 작품’ 페이지에서 구매 작품 목록을 확인하실 수 있으며, 자세한 내역은 ‘더보기’ 버튼을 통해 확인하실 수 있습니다.<br/><br/>구매 작품은 소장과 대여로 분류됩니다. 대여 작품은 72시간의 대여로 이루어지기 때문에 구매일로 부터 72시간이 지난 경우 재 결제 해주셔야 열람이 가능합니다."
+                    },
+                    {
+                        "q": "ContentCoin 충전은 어떻게 하나요?",
+                        "a": "로그인 후 ‘메인 페이지 좌측 상단 메뉴 > ContentCoin 충전 배너’ 또는 ‘하단 메뉴 바 > 코인’ 을 통해 충전 가능합니다.<br/><br/>작품 결제 페이지에서 보유하신 ContentCoin이 부족하신 경우에는 노출되는 충전 팝업을 통해 충전 페이지로 이동이 가능합니다.<br/><br/>가상화폐인 ContentCoin의 시세 그래프는 ‘메인 페이지 좌측 상단 메뉴 > 실시간 토다’ 를 통해 확인하실 수 있습니다."
+                    },
+                    {
+                        "q": "환불은 어떻게 받을 수 있나요?",
+                        "a": "결제일로부터 30일 이내에 충전된 ContentCoin을 전혀 이용하지 않은 경우 환불 신청이 가능하오며, 작품 구매 후 잔여 ContentCoin은 환불이 불가능합니다.<br/><br/>*환불은 ContentCoin 환불만 가능합니다."
+                    },
+                    {
+                        "q": "회원 탈퇴는 어떻게 하나요?",
+                        "a": "‘메인 페이지 좌측 상단 메뉴 > 설정 > 회원 탈퇴’ 를 통해 탈퇴 하실 수 있습니다.<br/><br/>회원 탈퇴 시 결제하신 작품은 전부 소멸되며, 이전에 사용하시던 SNS 계정으로 재가입 하셔도 이전에 구입하셨던 작품은 복구가 되지 않는 점 참고 부탁드립니다."
+                    }
+                ]
+            },
+            "submit": {
+                "header": "문의하기",
+                "title-placeholder": "제목을 입력하세요.(20자 이내)",
+                "content-placeholder": "문의 내용을 입력하세요.(300자 이내)",
+                "item-1": "답변은 상단의 문의 내역에서 확인 가능하십니다.",
+                "item-2": "빠른 시일 내에 답변드릴 수 있도록 노력하겠습니다.",
+                "button": "등록",
+                "title-error": "제목을 입력하세요.",
+                "content-error": "문의 내용을 입력하세요."
+            },
+            "confirmation": "문의내용이 등록됐습니다."
+        },
+        "history": {
+            "waiting": "답변대기",
+            "complete": "답변완료"
+        }
+    },
+    "dialog": {
+        "detail": {
+            "header": "선택 회차 결제",
+            "button-rent": "대여하기",
+            "button-rent.detail": "3일간 이용가능",
+            "button-buy": "소장하기",
+            "footer": "구매하기"
+        },
+        "login": {
+            "header": "SNS 계정으로 로그인/가입"
+        },
+        "to-billing": {
+            "msg-1": "결제에 필요한 ContentCoin이 부족합니다.",
+            "msg-2": "ContentCoin을 충전하시겠습니까?",
+            "button": "충전하기"
+        },
+        "unsubscribe": {
+            "header": "계정 탈퇴",
+            "content": "정말 탈퇴하시겠습니까? 탈퇴 시 결제 내역 및 구매 내역은 모두 삭제되며 복원할 수 없습니다.",
+            "button-cancel": "취소",
+            "button-confirm": "확인"
+        },
+        "unsubscribe-error": {
+            "not-answered": "탈퇴 사유 체크 확인해 주세요.",
+            "not-confirmed": "탈퇴 동의 체크 확인해 주세요."
+        },
+        "clear-cache": {
+            "button-cancel": "취소",
+            "button-confirm": "확인",
+            "content": "이미지 캐시를 삭제하시겠습니까?"
+        }
+    },
+    "error": {
+        "service-error": "서비스 에러",
+        "not-available": "현재 서비스의 상태가 원활하지 않습니다.",
+        "sorry-for-inconvenience": "서비스 이용에 불편을 드려 죄송합니다.",
+        "use-after-while": "잠시 후 해당 서비스를 이용해주시기 바랍니다."
+    }
+}

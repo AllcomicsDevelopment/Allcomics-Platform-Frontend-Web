@@ -1,0 +1,56 @@
+#history-detail {
+  .container {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .box-item__label{
+      font-family: 'Nanum Gothic', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-top: -2px;
+    }
+
+    .box-item__content {
+      .title{
+        font-weight: bold;
+      }
+      .date {
+        font-size: 13px;
+        padding-top: 2px;
+      }
+      .a-content {
+        font-size: 13px;
+        margin-top: 25px !important;
+        line-height: 18px;
+        font-weight: 600;
+      }
+    }
+
+    .box-item {
+      padding: 10px;
+
+      .box-item_title{
+        font-size: 13px;
+      }
+
+      .box-item_date {
+        text-align: right;
+        font-size: 13px;
+      }
+
+      &.box-item-question {
+        margin-top: 27px;
+        background: #f1f1f1;
+        border-radius: 4px;
+        padding: 25px 10px;
+      }
+    }
+  }
+
+  .green {
+    color: #46C1BE;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+}

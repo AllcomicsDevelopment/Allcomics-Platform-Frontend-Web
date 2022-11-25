@@ -1,0 +1,1006 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$project-ag-primary: mat-palette($mat-indigo);
+$project-ag-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$project-ag-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$project-ag-theme: mat-light-theme($project-ag-primary, $project-ag-accent, $project-ag-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($project-ag-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/css/reset";
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: 'Nanum Gothic', Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// constant
+$bar-border: #EBEBEB;
+$main-color: #46C1BE;
+$main-light-color: #9EDEDD;
+
+// common
+.bg-gray {
+  background: #EAEAEA;
+}
+
+.bg-white {
+  background: white;
+}
+
+.mat-drawer-container {
+    background: white;
+}
+
+/** material silder toggle **/
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: $main-light-color;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: $main-color;
+}
+
+.mat-drawer-content {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/** TOP BAR **/
+.top-bar {
+    max-width: 100vw;
+  width: 100%;
+  height: 55px;
+  background: white;
+  position: fixed;
+  z-index: 100;
+
+  // style 1
+  &-style-1 {
+    @extend .top-bar;
+    border-bottom: 2px solid $bar-border;
+  }
+
+  // style 2
+  &-style-2 {
+    @extend .top-bar;
+    background-color: $main-color;
+  }
+  &-style-3 {
+    @extend .top-bar;
+    background-color: transparent;
+  }
+}
+
+.left-button {
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  height: 16px;
+
+  // style 1
+  &-style-1 {
+    @extend .left-button;
+    height: 13px;
+    top: 20px;
+  }
+}
+
+.top-title {
+  margin: 0 auto;
+  display: inline-block;
+  padding: 16px 0;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: normal;
+  margin-top: 3px;
+
+  // style 2
+  &-style-2 {
+    @extend .top-title;
+    color: white;
+  }
+
+  .title-text {
+    font-size: 1.5rem;
+    cursor: pointer;
+    &.active {
+      color: #0ebebb;
+      font-weight: bold;
+    }
+  }
+}
+
+.top-logo {
+  display: block;
+  width: 36px;
+  margin: 0 auto;
+  padding: 9px 0;
+}
+
+input.input-top {
+  display: block;
+  width: calc(100vw - 80px);
+  height: 35px;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 5px;
+  margin: 9px 0 8px 35px;
+  color: white;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 16px;
+
+  &::-webkit-input-placeholder { /* Edge */
+    color: #ffffff9e;
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ffffff9e;
+  }
+
+  &::placeholder {
+    color: #ffffff9e;
+  }
+}
+
+.right-button {
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  font-size: 15px;
+  font-weight: bold;
+
+  // search style
+  &-search {
+    @extend .right-button;
+    height: 20px;
+    top: 17px;
+  }
+
+  // close style
+  &-close {
+     @extend .right-button;
+     height: 24px;
+     top: 15px;
+  }
+}
+
+.right-icon{
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 25px !important;
+}
+.green-fill{
+  color: $main-color;
+}
+
+/** CONTENT **/
+.content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: 'Nanum Gothic', sans-serif !important;
+  transition: all .1s;
+  word-break: break-all;
+}
+
+/** BOTTOM BAR **/
+.height0{
+  height: 0 !important;
+}
+
+#bottom-bar {
+  opacity: 0;
+}
+
+.bottom-bar {
+    max-width: 100vw;
+  width: 100%;
+  height: 60px;
+  border-top: 2px solid $bar-border;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  transition: 0.3s all;
+  z-index: 10;
+  opacity: 1 !important;
+
+  .bottom-nav {
+    margin: 0 auto;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    li {
+      display: inline;
+      text-align: center;
+
+      .nav-item {
+        font-size: 14px;
+        padding: 8px 0;
+        p {
+          padding-top: 3px;
+          font-size: 14px;
+        }
+        img{
+          width: 24px;
+          height: 24px; //하단바의 아이콘 크기
+        }
+      }
+    }
+  }
+}
+
+/** CONTROL BAR **/
+.control-bar {
+    max-width: 100vw;
+  background: black;
+  opacity: .7;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  height: 55px;
+  width: 100%;
+
+  .control-button {
+    display: flex;
+    align-items: center;
+
+    p {
+      color: white;
+      font-family: inherit;
+      font-size: 16px;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      font-weight: bold;
+      opacity: .9;
+    }
+  }
+
+  .divide {
+    display: block;
+    width: 1px;
+    background: #7E7D7D;
+    height: 17px;
+    margin: 20px auto;
+  }
+}
+
+/** FontSize **/
+.font-medium {
+    font-size:16px;
+}
+
+.font-small {
+    font-size: 12px;
+}
+
+.title-content{
+  h3{
+    margin-bottom: 8px;
+  }
+  span {
+    color: #7f7f7f;
+  }
+}
+
+/** Boder **/
+.bd-b-1 {
+  border-bottom: 1px solid $bar-border;
+}
+
+// Box Comic
+.section {
+    margin-top: 10px;
+
+    p {
+        font-size: 1.2rem;//week font size
+        //margin-bottom: -7.5px;
+    }
+}
+.section:first-child {
+  margin-top: 25px;
+}
+
+.full-width {
+  margin: 48px -15px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.comic-item {
+    h1 {
+        font-size: 4rem;
+        margin-top: 10px;
+    }
+    h3 {
+        font-size: 11px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        display: -webkit-box;
+        span.short_title {
+            white-space: nowrap;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 1.2rem;
+        }
+        span.short_title_genre {
+            white-space: nowrap;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 1.2rem;
+        }
+    }
+    p {
+        font-size: 2rem;
+        //padding-bottom: 7px;
+    }
+    .comic-thumbnail {
+        max-width: 10vw;      //실시간 랭킹 썸네일 크기//
+        min-width: 10vw;
+        position: relative;
+        width: 100%;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+    }
+    .comic-summary {
+        margin-left: 12px;
+        .comic-detail {
+            width: 100%;
+            h3{
+              margin-top: 5px;
+              margin-bottom: 13px;
+              line-height: 1.3;
+                font-size: 1.2rem; //오늘만 무료 작품 웹툰 아래 제목//
+            }
+            h3.wbt{
+              margin-top: 8px;
+              margin-bottom: 2px;
+            }
+            h3.myl{
+              margin-top: 8px;
+              margin-bottom: 2px;
+            }
+            p {
+              font-size: 8.5px;
+            }
+        }
+        .comic-rank {
+            margin: 0 10px;
+            color: #b3b3b3;
+        }
+        .comic-rank-detail {
+            width: 100%;
+            h3{
+                margin-top: 15px;
+                margin-bottom: 3px;
+                line-height: 1.3;
+                font-size: 1.8rem;     //실시간 랭킹 웹툰 제목//
+            }
+            h3.wbt{
+                margin-top: 8px;
+                margin-bottom: 2px;
+            }
+            h3.myl{
+                margin-top: 8px;
+                margin-bottom: 2px;
+            }
+            p {
+                font-size: 9.5px;
+            }
+        }
+        .comic-rank.active {
+            color: #4acecc;
+        }
+    }
+}
+
+.column-layout {
+    .list-comics {
+        margin: 1px -4px 20px;
+    }
+    .comic-item {
+        padding: 10px 5px 0px 5px;
+        .comic-thumbnail {
+            max-width: 100%;
+        }
+        .comic-summary {
+            margin-left: 0;
+        }
+        .comic-detail {
+            width: 100%;
+            h3{
+              margin-top: 3px;
+              margin-bottom: 3px;
+              line-height: 1.3;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &-pd-10-5{
+          padding: 10px 5px;
+        }
+    }
+    .comic-item-10-5 {
+      padding: 10px 5px;
+    }
+}
+
+.title-section {
+  .title-action {
+    vertical-align: super;
+    display: contents;
+    color: #7f7f7f;
+    span {
+      display: contents;
+    }
+  }
+}
+
+.icon-trend {
+  padding: 2px 2px 2px 2px;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 10px !important;
+  font-weight: bold;
+  line-height: 0;
+  margin-right: 2px;
+  vertical-align: super;
+  position: relative;
+  top: -2px;
+}
+
+.pir-trend {
+  border-color: #dd03ff;
+  color: #dd03ff;
+}
+
+.red-trend {
+  border-color: #ff0004;
+  color: #ff0004;
+}
+
+.yellow-trend {
+  border-color: #ffa20c;
+  color: #ffa20c;
+}
+.blue-trend {
+    border-color: #0ebebb;
+    color: #0ebebb;
+}
+
+
+
+/* dialog-content */
+.dialog-content {
+  font-size: 14px;
+  padding: 10px 0;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.mrg-t-45{
+  margin-top: 55px !important;
+}
+.mrg-b-60{
+  margin-bottom: 60px !important;
+}
+
+// Material Css
+.mat-button-focus-overlay {
+  background-color: transparent!important;
+}
+
+.mat-dialog-title {
+  margin: 0 !important;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mat-checkbox {
+  display: block !important;
+  .mat-checkbox-frame {
+    transform: scale(.7);
+    border: 1px solid #DADADA;
+  }
+}
+
+.mat-checkbox-checked .mat-checkbox-background {
+  transform: scale(.7);
+  background-color: #46C1BE !important;
+}
+
+.cdk-overlay-pane {
+  position: absolute;
+    max-width: 100vw;
+    min-width: 250px;
+  .mat-dialog-container {
+    padding: 20px !important;
+    position: relative;
+  }
+}
+
+::ng-deep .mat-simple-snackbar span{
+  font-size: 16px;
+  font-family: 'Nanum Gothic';
+}
+
+/*@media (max-width: 599px){
+  .mat-tab-header-pagination-controls-enabled{
+      .mat-tab-header-pagination {
+          display: none!important;
+      }
+  }
+}*/
+
+/* wrapper-side-nav */
+#wrapper-side-nav{
+  .mat-list-base{
+    padding: 15px 0;
+    .mat-list-item{
+        height: 55px;
+        p{
+          font-size: 15px;
+          font-family: inherit;
+        }
+        img{
+            width: 27px;
+            height: 27px;
+        }
+        .mat-list-icon{
+            border-radius: 0;
+        }
+        .mat-list-item-content{
+            padding: 0 20px !important;
+        }
+    }
+  }
+}
+
+#week-comics {
+  .mat-ink-bar{
+    background-color: #46C1BE !important;
+  }
+  p.ng-star-inserted{
+    font-weight: bold !important;
+  }
+  .mat-tab-label {
+    height: 60px !important;
+    padding: 0 !important;
+    min-width: calc(100% / 8) !important; // tab width
+    font-size: 15px;
+    opacity: 1 !important;
+  }
+  .mat-tab-label-active {
+    color: #46C1BE;
+  }
+}
+
+/** Webtoon **/
+#wrapper-webtoon{
+  .mat-ink-bar{
+    background-color: #46C1BE !important;
+  }
+  p.ng-star-inserted{
+    font-weight: bold !important;
+  }
+  .mat-tab-label {
+    height: 40px !important;
+    padding: 0 !important;
+    min-width: calc(100% / 7) !important; // tab width
+    font-size: 13px;        // font size genre
+    opacity: 1 !important;
+  }
+    //요일별 웹툰 날짜 선택하는 바
+  .cdk-focused{
+    color: #46C1BE !important;
+  }
+}
+/** Customer support **/
+#customer-support {
+  .mat-ink-bar{
+    display: none;
+  }
+  .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+  }
+  .mat-tab-label-container{
+    .mat-tab-label{
+      height: 35px !important;
+      min-width: calc(100% / 2) !important;
+      font-size: 10px;
+      opacity: 1 !important;
+      .mat-tab-label-content{
+        font-size: 16px;
+      }
+    }
+  }
+  .mat-expansion-panel-header-title{
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .mat-expansion-panel-header-description{
+    padding-top: 6px;
+  }
+  .mat-expansion-indicator::after{
+    color: rgba(0, 0, 0, 0.3);
+    margin-top: -10px;
+    border-width: 0 2px 2px 0;
+  }
+  .mat-expansion-panel {
+    &.mat-expanded {
+      background: #f1f1f1;
+      box-shadow: none;
+      margin: 0;
+    }
+    .mat-content {
+      display: block;
+      .mat-expansion-panel-header-description {
+        font-size: 14px;
+      }
+    }
+    .mat-expansion-panel-body{
+      padding: 15px 24px 16px !important;
+    }
+  }
+  .mat-tab-label-active{
+    color: #46C1BE !important;
+  }
+}
+
+#auth-customer-support {
+    .mat-ink-bar{
+        display: none;
+    }
+    .mat-expansion-panel:not([class*=mat-elevation-z]) {
+        box-shadow: none;
+    }
+    .mat-tab-label-container{
+        .mat-tab-label{
+            height: 35px !important;
+            min-width: calc(100% / 3) !important;
+            font-size: 10px;
+            opacity: 1 !important;
+            .mat-tab-label-content{
+                font-size: 16px;
+            }
+        }
+    }
+    .mat-expansion-panel-header-title{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .mat-expansion-panel-header-description{
+        padding-top: 6px;
+    }
+    .mat-expansion-indicator::after{
+        color: rgba(0, 0, 0, 0.3);
+        margin-top: -10px;
+        border-width: 0 2px 2px 0;
+    }
+    .mat-expansion-panel {
+        &.mat-expanded {
+            background: #f1f1f1;
+            box-shadow: none;
+            margin: 0;
+        }
+        .mat-content {
+            display: block;
+            .mat-expansion-panel-header-description {
+                font-size: 14px;
+            }
+        }
+        .mat-expansion-panel-body{
+            padding: 15px 24px 16px !important;
+        }
+    }
+    .mat-tab-label-active{
+        color: #46C1BE !important;
+    }
+}
+/** Billing **/
+#wrapper-billing {
+  mat-form-field {
+    display: block !important;
+    &:after{
+        position: absolute;
+        display: inline-block;
+        content: "";
+        top: 35px;
+        right: 15px;
+        font-size: 14px;
+        font-weight: normal;
+        font-family: 'Nanum Gothic', sans-serif;
+      }
+  }
+  .mat-form-field-infix{
+      border: 2px solid #9DDEDC;
+      margin-top: 16px;
+      padding: 15px !important;
+      border-radius: 5px;
+  }
+  .mat-form-field-underline{
+      display: none !important;
+  }
+  .mat-select-arrow{
+      border: none !important;
+  }
+  .mat-form-field-wrapper{
+      padding-bottom: 0 !important;
+  }
+  .mat-select-value-text{
+      span{
+          font-family: 'Nanum Gothic', sans-serif;
+          font-size: 15px;
+          font-weight: 900;
+      }
+  }
+  .mat-option-text{
+      font-family: 'Nanum Gothic', sans-serif !important;
+      font-size: 12px !important;
+  }
+  .mat-dialog-actions{
+      button{
+          margin: 0 auto;
+          color: #46C1BE;
+      }
+  }
+  .mat-checkbox-inner-container {
+    margin-right: 3px !important;
+  }
+}
+
+/** wrapper-detal **/
+#wrapper-detail{
+  .mat-form-field-underline {
+    display: none;
+  }
+  .mat-select-value-text{
+      font-size: 14px !important;
+  }
+  .mat-form-field-flex{
+      width: 100px !important;
+  }
+  .mat-form-field-wrapper{
+      padding: 0 !important;
+      margin-top: -25px !important;
+  }
+  .mat-select-value{
+      text-align: right;
+      padding-right: 5px;
+  }
+  .mat-dialog-container{
+    position: relative !important;
+  }
+}
+
+#history-sort-wrapper {
+    .mat-form-field-underline {
+        display: none;
+    }
+    .mat-select-value-text{
+        font-size: 14px !important;
+    }
+    .mat-form-field-flex{
+        width: 100px !important;
+    }
+    .mat-form-field-wrapper{
+        padding: 0 !important;
+        margin-top: -25px !important;
+    }
+    .mat-select-value{
+        text-align: right;
+        padding-right: 5px;
+    }
+    .mat-dialog-container{
+        position: relative !important;
+    }
+}
+
+// Wrapper Purchase
+#wrapper-purchase {
+  .mat-select-value-text{
+    font-size: 13px !important;
+  }
+  .mat-select-value{
+      text-align: right;
+      padding-right: 5px;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-underline, .mat-form-field-appearance-legacy .mat-form-field-ripple {
+      height: 0!important;
+  }
+  .mat-form-field-appearance-legacy {
+      .mat-form-field-infix {
+          padding: 0;
+          border: 0;
+          width: 100px;
+      }
+  }
+  .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+      color: #46c1be!important;
+  }
+  .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+      color: #46c1be!important;
+  }
+  .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+      background: rgba(255, 255, 255, 0.12)!important;
+  }
+}
+
+/** wrapper-event **/
+#wrapper-event{
+  .mat-ink-bar{
+    background-color: #46C1BE !important;
+  }
+  p.ng-star-inserted{
+    font-size: 14px;
+  }
+  .mat-tab-label {
+    height: 40px !important;
+    padding: 0 !important;
+    min-width: calc(100% / 2) !important;
+    font-size: 10px;
+    opacity: 1 !important;
+  }
+  .cdk-focused{
+    color: #46C1BE !important;
+  }
+}
+
+/*wrapper-unsubcribe*/
+#wrapper-unsubcribe{
+  .mat-dialog-title {
+    font-size: 18px;
+  }
+}
+
+.cdk-overlay-container{
+  .mat-option{
+    .mat-option-text{
+      font-family: 'Nanum Gothic', sans-serif !important;
+      font-size: 12px !important;
+    }
+  }
+}
+
+// Idol
+#wrapper-idol{
+  .mat-ink-bar{
+    background-color: #46C1BE !important;
+  }
+  p.ng-star-inserted{
+    font-size: 14px;
+  }
+  .mat-tab-label {
+    height: 34px !important;
+    padding: 0 !important;
+    min-width: calc(100% / 2) !important;
+    font-size: 10px;
+    opacity: 1 !important;
+  }
+  .cdk-focused{
+    color: #46C1BE !important;
+  }
+}
+
+/* image fixed size */
+.object-fit_fill { object-fit: fill }
+.object-fit_contain {
+  object-fit: cover;
+}
+.object-fit_cover { object-fit: cover }
+.object-fit_none { object-fit: none }
+.object-fit_scale-down { object-fit: scale-down }
+
+.container-image {
+  position: relative;
+  width: 100%;
+  &-1-1{
+    padding-top: 100%;  /*1:1 Aspect Ratio */
+  }
+  &-16-9{
+    padding-top: 56.25%;  /*16:9 Aspect Ratio */
+  }
+  &-4-3{
+    padding-top: 75%;  /*4:3 Aspect Ratio */
+  }
+  &-3-2{
+     padding-top: 66.66%;  /*3:2 Aspect Ratio */
+  }
+  &-32-45{
+    padding-top: 140.62%;  /*32:45 Aspect Ratio */
+  }
+  &-720-1280{
+    padding-top: 178.57%;  /*32:45 Aspect Ratio */
+  }
+  &-720-1080{
+    padding-top: 143.05%;  /*32:45 Aspect Ratio */
+  }
+  &-8-5{
+    padding-top: 62.5%; /* 8:5 Aspect Ratio */
+  }
+  &-2-1{
+    padding-top: 50.66%;  /*2:1 Aspect Ratio */
+ }
+  img {
+    width: 100%;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+  }
+}
+// IMPORT DEFINE BUTTON
+@import "assets/css/padding";
+@import "assets/css/button";
+
+.top-bar-style-1 {
+    border-bottom: 1px solid #ebebeb !important;
+}
+
+
+.mat-option.mat-active {
+  background: rgba(0,0,0, 0.05) !important;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: inherit;
+}
+
+
+.esp-thumnail {
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://app.allcomics.co.kr/</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://app.allcomics.co.kr/home</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://app.allcomics.co.kr/webtoon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://app.allcomics.co.kr/payment</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://app.allcomics.co.kr/mypage</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+</urlset>

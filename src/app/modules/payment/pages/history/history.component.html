@@ -1,0 +1,23 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div class="list-esp">
+    <div id="history-sort-wrapper" class="sort-wrapper pd-lr-15 list-topbar" fxLayout="row" fxFlexFill fxLayoutAlign="start stretch">
+        <p fxFlexOrder="1" fxFlex="50%">&nbsp;</p>
+        <mat-form-field fxFlexOrder="2" fxFlex="50%" fxLayoutAlign="end start">
+            <mat-select [(value)]="selected">
+                <mat-option value="option1" (click)="changeSort('!createdAt')">{{ 'billing.history-desc' | translate }}</mat-option>
+                <mat-option value="option2" (click)="changeSort('createdAt')">{{ 'billing.history-asc' | translate }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="list-area" *ngIf="(tdnHistory$|async) && (tdnHistory$|async).list.length > 0">
+        <ng-container *ngFor="let item of (tdnHistory$|async).list; let i = index">
+            <app-tdn-history-item [data]="item" style="width: 100%"></app-tdn-history-item>
+        </ng-container>
+        <div class="history-loader" *ngIf="(isFetching$|async) && (page$|async) + 1 <= (totalPage$|async)">
+            <div class="loading" [ngStyle]="{ 'borderTopColor': '#46c1be', width: '30px', height: '30px' }"></div>
+        </div>
+    </div>
+</div>
+<div class="mrg-b-60"></div>
+<app-footer></app-footer>

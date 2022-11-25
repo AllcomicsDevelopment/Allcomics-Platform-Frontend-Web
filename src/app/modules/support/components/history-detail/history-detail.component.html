@@ -1,0 +1,20 @@
+<div id="history-detail">
+    <div class="container">
+        <div class="box-item" fxLayout="row" fxLayoutAlign="start">
+            <div fxFlex="5%" class="box-item__label green"><strong>A</strong></div>
+            <div fxFlex="95%" class="box-item__content">
+                <div class="green">{{ 'history-detail.complete' | translate }}</div>
+                <div class="title" [innerHTML]="historySupport.title | safeHtml"></div>
+                <div class="date">{{ historySupport.date }}</div>
+                <div class="a-content" [innerHTML]="historySupport.content | safeHtml"></div>
+            </div>
+        </div>
+        <div class="box-item box-item-question" fxLayout="row" fxLayoutAlign="start">
+            <div fxFlex="5%" class="box-item__label"><strong>Q</strong></div>
+            <div fxFlex="95%" >
+                <h4 class="box-item_title" [innerHTML]="historySupport.qContent | safeHtml"></h4>
+                <div class="box-item_date">{{ historySupport.qDate }}</div>
+            </div>
+        </div>
+    </div>
+</div>

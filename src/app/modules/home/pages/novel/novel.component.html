@@ -1,0 +1,272 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div class="swiper-container slider-homepage" *ngIf="(slideBanner$|async)" [swiper]="config">
+    <div class="swiper-wrapper">
+        <div *ngFor="let slide of (slideBanner$|async).list" class="swiper-slide" (click)="onClickSlideItem(slide.redirect_url)">
+            <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+                <img [src]="slide.img_url" alt="{{ slide.img_url }}" class="img-responsive"/>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination pd-lr-10"></div>
+</div>
+<div class="pd-lr-15">
+    <div class="section" id="wrapper-webtoon" (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)">
+        <div class="title-section" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3>{{ 'main.week.header-novel' | translate }}</h3>
+            </div>
+            <div class="title-action"></div>
+        </div>
+        <mat-tab-group #tabGroup dynamicHeight="false"
+                       [(selectedIndex)]="selectedIndex"
+                       [@.disabled]="true"
+                       (selectedTabChange)="changeTab($event)"
+                       [animationDuration]="'10ms'">
+            <mat-tab *ngFor="let tab of tabs" label="index">
+                <ng-template mat-tab-label>
+                    <p>{{ tab.name | translate }}</p>
+                </ng-template>
+                <div (touchstart)="swipe($event, 'start')"
+                     (touchend)="swipe($event, 'end')">
+                    <div class="content-table pd-l-5 pd-r-5">
+                        <div class="section column-layout">
+                            <div class="list-comics" fxLayout="row wrap">
+                                <div class="comic-item pd-t-10 pd-b-10" fxFlex.lt-sm="33" fxFlex.md="25" fxFlex.sm="50" *ngFor="let item of (novelList$|async)" (click)="onDetail(item.id)">
+                                    <div class="comic-thumbnail">
+                                        <div class="container-image container-image-720-1080">
+                                            <img class="object-fit_contain" [src]="item.thumbnail.sq" alt="{{ item.name }}">
+                                        </div>
+                                    </div>
+                                    <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                        <div class="comic-detail">
+                                            <h3 class="wbt"><span class="short_title">{{ item.name }} </span> <!--<span *ngIf="item.trend" class="icon-trend" [ngClass]="{ 'pir-trend': item.trend == 'UP', 'red-trend': item.trend != 'UP' }">{{ item.trend }}</span>--></h3>
+<!--                                            <p>{{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }} <span>&nbsp;|&nbsp;</span> {{ item.postDay | date: 'yyyy-MM-dd' }}</p>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+
+    <!-- 실시간 랭킹 -->
+    <div id="all-comics-ranking" class="section row-layout" style="float:left">
+        <div class="title-section pd-t-10 pd-b-10" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3>{{ 'main.ranking.header' | translate }}</h3>
+<!--                <span class="font-small">{{ 'main.ranking.description' | translate }}</span>-->
+            </div>
+            <div class="title-action">
+                <!-- <span class='font-small'>{{ 'common.see-more' | translate }} ></span> -->
+            </div>
+        </div>
+        <div class="list-comics" *ngIf="ranking$|async">
+            <ng-container *ngFor="let item of (ranking$|async); let i = index">
+                <div class="comic-item pd-t-10 pd-b-10" fxLayout fxLayoutAlign="start" (click)="onShowDetail(item.id)">
+                    <div class="comic-thumbnail">
+                        <img [src]="item.thumbnail.sq" [alt]="item.name">
+                    </div>
+                    <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                        <div class="comic-rank" [ngClass]="{ 'active' : i >= 0 }"><h1>{{ 2*i + 1 }}</h1></div>
+                        <div class="comic-rank-detail">
+                            <h3 [innerText]="item.name"></h3>
+<!--                            <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }} <span> | </span> {{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }}</p>-->
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div id="all-comics-ranking 2" class="section row-layout" style="margin-left: 50vw">
+<!--        <div class="title-section pd-t-10 pd-b-10" fxLayout fxLayoutAlign="space-between">-->
+<!--            <div class="title-content font-medium">-->
+<!--                <h3>{{ 'main.ranking.header' | translate }}</h3>-->
+<!--                &lt;!&ndash;                <span class="font-small">{{ 'main.ranking.description' | translate }}</span>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div class="title-action">-->
+<!--                &lt;!&ndash; <span class='font-small'>{{ 'common.see-more' | translate }} ></span> &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="list-comics" *ngIf="ranking$|async" class="pd-t-37">
+            <ng-container *ngFor="let item of (ranking$|async); let i = index">
+                <div class="comic-item pd-t-10 pd-b-10" fxLayout fxLayoutAlign="start" (click)="onShowDetail(item.id)">
+                    <div class="comic-thumbnail">
+                        <img [src]="item.thumbnail.sq" [alt]="item.name">
+                    </div>
+                    <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                        <div class="comic-rank" [ngClass]="{ 'active' : i >= 0 }"><h1>{{ 2*i + 2 }}</h1></div>
+                        <div class="comic-rank-detail">
+                            <h3 [innerText]="item.name"></h3>
+                            <!--                            <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }} <span> | </span> {{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }}</p>-->
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <!-- 오늘만 무료-->
+    <div id="cheap-sale" class="section column-layout">
+        <div class="title-section pd-t-10 pd-b-5" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3>{{ 'main.cheap-sale.header-novel' | translate }}</h3>
+            </div>
+            <!-- <div class="title-action">{{ 'common.see-more' | translate }} ></div> -->
+        </div>
+        <div class="list-comics slider-type-2" fxLayout="row wrap" *ngIf="completed$|async">
+            <div class="swiper-container slider-homepage" [swiper]="customConfig">
+                <div class="swiper-wrapper">
+                    <div *ngFor="let item of (completed$|async)" class="swiper-slide">
+                        <div class="comic-item pd-t-10 pd-b-10" fxFlex.lt-sm="100" fxFlex.md="100" (click)="onShowDetail(item.id)">
+                            <div class="comic-thumbnail">
+                                <div class="container-image container-image-720-1080">
+                                    <img class="object-fit_contain" [src]="item.thumbnail.sq" [alt]="item.name">
+                                </div>
+                            </div>
+                            <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                <div class="comic-detail">
+                                    <h3 [innerText]="item.name"></h3>
+<!--                                    <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }} <span>&nbsp;|&nbsp;</span> {{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }}</p>-->
+<!--                                    <p>{{ getTranslateGenre(item.genre) }}</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 인기 추천 작품 -->
+    <div id="popular-comics" class="section column-layout">
+        <div class="title-section pd-t-10 pd-b-5" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3>{{ 'main.popular.header' | translate }}</h3>
+            </div>
+            <!-- <div class="title-action">{{ 'common.see-more' | translate }} ></div> -->
+        </div>
+        <div class="list-comics slider-type-2" fxLayout="row wrap" *ngIf="populars$|async">
+            <div class="swiper-container slider-homepage" [swiper]="customConfig">
+                <div class="swiper-wrapper">
+                    <div *ngFor="let item of (populars$|async)" class="swiper-slide">
+                        <div class="comic-item pd-t-10 pd-b-10" fxFlex.lt-sm="100" fxFlex.md="100" (click)="onShowDetail(item.id)">
+                            <div class="comic-thumbnail">
+                                <div class="container-image container-image-720-1080">
+                                    <img class="object-fit_contain" [src]="item.thumbnail.sq" [alt]="item.name">
+                                </div>
+                            </div>
+                            <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                <div class="comic-detail">
+                                    <h3 [innerText]="item.name"></h3>
+<!--                                    <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }} <span>&nbsp;|&nbsp;</span> {{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }}</p>-->
+<!--                                    <p>{{ getTranslateGenre(item.genre) }}</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 오늘의 신작  -->
+    <div id="new-update-comics" class="section column-layout">
+        <div class="title-section pd-t-10 pd-b-5" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3>{{ 'main.new-update.header' | translate }}</h3>
+            </div>
+            <!-- <div class="title-action">{{ 'common.see-more' | translate }} ></div> -->
+        </div>
+        <div class="list-comics slider-type-2" fxLayout="row wrap" *ngIf="recentlyUpdated$|async">
+            <div class="swiper-container slider-homepage" [swiper]="customConfig">
+                <div class="swiper-wrapper">
+                    <div *ngFor="let item of (recentlyUpdated$|async)" class="swiper-slide">
+                        <div class="comic-item pd-t-10 pd-b-10" fxFlex.lt-sm="100" fxFlex.md="100" (click)="onShowDetail(item.id)">
+                            <div class="comic-thumbnail">
+                                <div class="container-image container-image-720-1080">
+                                    <img class="object-fit_contain" [src]="item.thumbnail.sq" [alt]="item.name">
+                                </div>
+                            </div>
+                            <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                <div class="comic-detail">
+                                    <h3 [innerText]="item.name"></h3>
+                                    <!--                                    <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }} <span>&nbsp;|&nbsp;</span> {{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }}</p>-->
+                                    <!--                                    <p>{{ getTranslateGenre(item.genre) }}</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도전! 밀리언 웹툰 -->
+    <div id="hot-romance-comics" class="section column-layout">
+        <div class="title-section pd-t-10 pd-b-5" fxLayout fxLayoutAlign="space-between">
+            <div class="title-content font-medium">
+                <h3>{{ 'main.hot-romance.header-novel' | translate }}</h3>
+            </div>
+            <!-- <div class="title-action">{{ 'common.see-more' | translate }} ></div> -->
+        </div>
+        <div class="list-comics slider-type-2" fxLayout="row wrap" *ngIf="million$|async">
+            <div class="swiper-container slider-homepage" [swiper]="customConfig">
+                <div class="swiper-wrapper">
+                    <div *ngFor="let item of (million$|async)" class="swiper-slide">
+                        <div class="comic-item pd-t-10 pd-b-10" fxFlex.lt-sm="100" fxFlex.md="100" (click)="onShowDetail(item.id)">
+                            <div class="comic-thumbnail">
+                                <div class="container-image container-image-720-1080">
+                                    <img class="object-fit_contain" [src]="item.thumbnail.sq" [alt]="item.name">
+                                </div>
+                            </div>
+                            <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                                <div class="comic-detail">
+                                    <h3 [innerText]="item.name"></h3>
+<!--                                    <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }} <span>&nbsp;|&nbsp;</span> {{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }}</p>-->
+<!--                                    <p>{{ getTranslateGenre(item.genre) }}</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer-main">
+        <div class="top-footer">
+            <p>{{ 'main.footer.top' | translate }}</p>
+            <span>ⓒAll Webtoon TV all right reserved.</span>
+            <div *ngIf="getCurrentLanguage() === 'ko'">
+                <span class="font-small" style="font-size: 11px" (click)="onClickPolicyItem('privacy')">개인정보처리방침</span>
+                <span class="font-small" style="font-size: 11px; margin: 0 20px 0 20px;" (click)="onClickPolicyItem('policy')">이용약관</span>
+                <span class="font-small" style="font-size: 11px" (click)="onClickPolicyItem('youth-privacy')">청소년보호정책</span>
+            </div>
+        </div>
+        <img class="footer-down" [ngClass]="{'footer-up': isToggle}" src="assets/icons/down-chevron.svg" (click)="onToggleInformation()">
+        <div class="main-footer" *ngIf="isToggle">
+            <p>{{ 'main.footer.contact' | translate }} : <a href="javascript:void(0)">{{ 'main.footer.tel' | translate }}</a></p>
+            <p>{{ 'main.footer.email' | translate }} : <a href="mailto:webtoontv@naver.com" target="_blank">webtoontv@naver.com</a></p>
+            <p *ngIf="getCurrentLanguage() === 'ko'">사업자등록번호 : 656-86-00544</p>
+            <p *ngIf="getCurrentLanguage() === 'ko'">통신판매업신고번호 : 제2020-서울마포-1279호</p>
+            <p class="footer-address">{{ 'main.footer.address' | translate }} : {{ 'main.footer.address-content' | translate }}</p>
+
+            <div class="divider"></div>
+
+            <p class="extra-footer-top">{{ 'main.extra-footer.top' | translate }}</p>
+            <p>{{ 'main.extra-footer.title.name' | translate }} : {{ 'main.extra-footer.content.name' | translate }}</p>
+            <p>{{ 'main.extra-footer.title.english-name' | translate }} : {{ 'main.extra-footer.content.english-name' | translate }}</p>
+            <p>{{ 'main.extra-footer.title.registration-number' | translate }} : {{ 'main.extra-footer.content.registration-number' | translate }}</p>
+            <p>{{ 'main.extra-footer.title.email' | translate }} : <a href="mailto:helpdesk@todaq.net" target="_blank">{{ 'main.extra-footer.content.email' | translate }}</a></p>
+            <p>{{ 'main.extra-footer.title.phone' | translate }} : <a href="javascript:void(0)" target="_blank">{{ 'main.extra-footer.content.phone' | translate }}</a></p>
+            <p class="footer-address">{{ 'main.extra-footer.title.address' | translate }} : {{ 'main.extra-footer.content.address' | translate }}</p>
+        </div>
+    </footer>
+</div>
+<div class="mrg-b-60"></div>
+<app-footer [templateInfo]="templateInfo"></app-footer>

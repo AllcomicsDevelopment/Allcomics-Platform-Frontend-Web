@@ -1,0 +1,40 @@
+<!-- >>>>> BOTTOM BAR <<<<< -->
+<div id="bottom-bar" class="bottom-bar">
+    <nav>
+        <ul class="bottom-nav" fxLayout="row" fxFlexFill fxLayoutAlign="start space-between">
+            <li fxFlexOrder="1" fxFlex="25%">
+                <a [routerLink]="['']">
+                    <div class="nav-item">
+                        <img src="assets/icons/nav1.svg">
+                        <p>{{ 'footer.home' | translate }}</p>
+                    </div>
+                </a>
+            </li>
+            <li fxFlexOrder="2" fxFlex="25%">
+                <a [routerLink]="['/genres/webtoon']">
+                    <div class="nav-item">
+                        <img src="assets/icons/nav2.svg">
+                        <p>{{ 'footer.page' | translate }}</p>
+                    </div>
+                </a>
+            </li>
+            <li fxFlexOrder="3" fxFlex="25%">
+<!--                <a [routerLink]="['/payment']">-->
+                <a (click)="onClickPayment()">
+                    <div class="nav-item">
+                        <img src="assets/icons/nav3.svg">
+                        <p>{{ 'footer.bill' | translate }}</p>
+                    </div>
+                </a>
+            </li>
+            <li fxFlexOrder="4" fxFlex="25%">
+                <a [routerLink]="['/mypage']">
+                    <div class="nav-item">
+                        <img src="assets/icons/nav4.svg">
+                        <p>{{ 'footer.user' | translate }}</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

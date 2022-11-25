@@ -1,0 +1,16 @@
+<div class="box-bottom text-center login-button-container">
+    <h6>{{ 'dialog.login.header' | translate }}</h6>
+    <button class="btn-social btn-kakao" (click)="onSignWithSocial('kakao')">
+        <img src="assets/icons/icon-kakao.svg" class="social-icon"><span>{{ 'login.kakao' | translate }}</span>
+    </button>
+    <button class="btn-social btn-google" (click)="onSignWithSocial('google')">
+        <img src="assets/icons/icon-google.svg" class="social-icon"><span>{{ 'login.google' | translate }}</span>
+    </button>
+    <button class="btn-social btn-apple"
+            *ngIf="isiOS"
+            style="padding-left: 2px; background: #000;" (click)="onSignWithSocial('apple')">
+        <img src="assets/icons/apple-white.svg" class="social-icon"
+             style="width: 57px; margin-right: 0">
+        <span style="color: white">{{ 'login.apple' | translate }}</span>
+    </button>
+</div>

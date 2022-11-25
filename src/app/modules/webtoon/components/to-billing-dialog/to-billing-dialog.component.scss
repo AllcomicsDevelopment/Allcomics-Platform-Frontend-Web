@@ -1,0 +1,30 @@
+.to-billing-dialog{
+    // width: 318px;
+    p{
+        font-size: 18px;
+        color: red;
+        display: block;
+        margin-bottom: 8px;
+        text-align: center;
+        font-weight: 700;
+    }
+    span{
+        font-size: 15px;
+        display: block;
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: 700;
+    }
+    button{
+        width: 100%;
+        background: #46C1BE;
+        font-size: 18px;
+        padding: 3px 0;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}

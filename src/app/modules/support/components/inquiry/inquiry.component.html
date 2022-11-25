@@ -1,0 +1,27 @@
+<div id="customer-inquiry">
+    <div class="wrapper">
+        <h4 class="pd-b-10">{{ 'customer-support.inquiry.submit.header' | translate }}</h4>
+        <form class="qa-form" [formGroup]="inquiryForm" (ngSubmit)="onSubmit()">
+            <!-- <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>제목을 입력하세요.(20자 이내)</mat-label> -->
+            <input placeholder="{{ 'customer-support.inquiry.submit.title-placeholder' | translate }}" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+            <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                <div *ngIf="f.title.errors.required">{{ 'customer-support.inquiry.submit.title-error' | translate }}</div>
+            </div>
+            <!-- </mat-form-field> -->
+
+            <!-- <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>문의 내용을 입력하세요.</mat-label> -->
+            <textarea placeholder="{{ 'customer-support.inquiry.submit.content-placeholder' | translate }}" [rows]="5" formControlName="content" [ngClass]="{ 'is-invalid': submitted && f.content.errors }"></textarea>
+            <div *ngIf="submitted && f.content.errors" class="invalid-feedback">
+                <div *ngIf="f.content.errors.required">{{ 'customer-support.inquiry.submit.content-error' | translate }}</div>
+            </div>
+            <!-- </mat-form-field> -->
+            <ul>
+                <li>· {{ 'customer-support.inquiry.submit.item-1' | translate }}</li>
+                <li>· {{ 'customer-support.inquiry.submit.item-2' | translate }}</li>
+            </ul>
+            <button mat-flat-button class="btn-submit">{{ 'customer-support.inquiry.submit.button' | translate }}</button>
+        </form>
+    </div>
+</div>

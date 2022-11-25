@@ -1,0 +1,32 @@
+<div class="bottom-dialog">
+    <mat-form-field>
+        <mat-select #sidenav [(value)]="selected">
+            <mat-option [value]="1">신용카드</mat-option>
+            <mat-option [value]="2">신용카드 2</mat-option>
+            <mat-option [value]="3">신용카드 3</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <table  class="mat-elevation-z8">
+        <tr>
+            <td style="text-align: left">상품 A</td>
+            <td width="20%" style="text-align: right">
+                <div class="qty-box">
+                    <span class="dec">–</span>
+                    <span class="qty">1</span>
+                    <span class="inc">+</span>
+                </div>
+            </td>
+            <td width="20%" style="text-align: right">50 ContentCoin</td>
+            <td style="text-align: right">x</td>
+        </tr>
+    </table>
+</div>
+<div class="total" >
+    <table  class="mat-elevation-z8">
+        <tr>
+            <td style="text-align: left">총 상품금액</td>
+            <td style="text-align: right">50 ContentCoin</td>
+        </tr>
+    </table>
+</div>
+<div class="btn-purchase font-medium">구매하기</div>

@@ -1,0 +1,109 @@
+<app-header [templateInfo]="templateInfo"></app-header>
+<div class="mrg-t-45"></div>
+<div class="box-1">
+    <p *ngIf="(results && results.length >= 0)">‘{{ keyWord }}’ {{ 'search.result' | translate:{ no: (total$|async) } }}</p>
+</div>
+<div class="pd-lr-20">
+    <!-- All Comics Ranking -->
+    <div id="all-comics-search" class="row-layout" *ngIf="results">
+        <ng-container *ngFor="let item of results; let i = index">
+            <div class="list-comics">
+                <div class="comic-item" fxLayout fxLayoutAlign="start" (click)="onShowDetail(item.id)">
+                    <div class="comic-thumbnail">
+                        <div class="container-image container-image-3-2">
+                            <img class="object-fit_contain" [src]="item.thumbnails.hs" [alt]="item.name">
+                        </div>
+                    </div>
+                    <div class="comic-summary" fxLayout fxLayoutAlign="start">
+                        <div class="comic-detail">
+                            <h3>{{item.name}}</h3>
+                            <p>{{ 'common.no-episodes' | translate:{ no: item.validEpisodeCount } }} <span>&nbsp;|&nbsp;</span> {{ (item.age > 0 ? 'common.age-over' : 'common.all-age') | translate:{ age: item.age } }}</p>
+                            <p>{{ getTranslateGenre(item.genres) }}</p>
+                        </div>
+                    </div>
+                </div>
+                <mat-divider *ngIf="(i + 1) < results.length"></mat-divider>
+            </div>
+        </ng-container>
+        <div class="title-loader" *ngIf="(isFetching$|async) && (page$|async) + 1 <= (totalPage$|async)">
+            <div class="loading" [ngStyle]="{ 'borderTopColor': '#46c1be', width: '30px', height: '30px' }"></div>
+        </div>
+    </div>
+    <!-- <div class="comic-item" fxLayout fxLayoutAlign="start">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-3-2">
+                <img class="object-fit_contain" src="https://i.imgur.com/csn2USW.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>계약연인</h3>
+                <p>122화   l  15세 이용가</p>
+                <p>로맨스, 드라마</p>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="comic-item" fxLayout fxLayoutAlign="start">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-3-2">
+                <img class="object-fit_contain" src="https://i.imgur.com/csn2USW.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>계약연인</h3>
+                <p>122화   l  15세 이용가</p>
+                <p>로맨스, 드라마</p>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="comic-item" fxLayout fxLayoutAlign="start">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-3-2">
+                <img class="object-fit_contain" src="https://i.imgur.com/csn2USW.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>계약연인</h3>
+                <p>122화   l  15세 이용가</p>
+                <p>로맨스, 드라마</p>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="comic-item" fxLayout fxLayoutAlign="start">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-3-2">
+                <img class="object-fit_contain" src="https://i.imgur.com/csn2USW.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>계약연인</h3>
+                <p>122화   l  15세 이용가</p>
+                <p>로맨스, 드라마</p>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="comic-item" fxLayout fxLayoutAlign="start">
+        <div class="comic-thumbnail">
+            <div class="container-image container-image-3-2">
+                <img class="object-fit_contain" src="https://i.imgur.com/csn2USW.png" alt="계약연인">
+            </div>
+        </div>
+        <div class="comic-summary" fxLayout fxLayoutAlign="start">
+            <div class="comic-detail">
+                <h3>계약연인</h3>
+                <p>122화   l  15세 이용가</p>
+                <p>로맨스, 드라마</p>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</div>
+</div> -->
+</div>

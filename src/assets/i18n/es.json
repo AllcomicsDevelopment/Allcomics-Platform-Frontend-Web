@@ -1,0 +1,376 @@
+{
+    "common": {
+        "currency": "USD",
+        "currency-symbol": "$",
+        "currency-name": "DOLLAR",
+        "genre": {
+            "all": "All",
+            "romance": "Romance",
+            "drama": "Drama",
+            "sports": "Deportes",
+            "BL": "BL",
+            "fantasy": "Fantasía",
+            "action": "Acción",
+            "school": "Escolar",
+            "etc": "Otros",
+            "blgl": "BL/GL",
+            "manga": "+18",
+            "challenges": "Concurso"
+        },
+        "week": {
+            "mon": "Lu",
+            "tue": "Ma",
+            "wed": "Mi",
+            "thu": "Ju",
+            "fri": "Vi",
+            "sat": "Sa",
+            "sun": "Do",
+            "com": "Fin."
+        },
+        "no-episodes": "Mayores de +{{no}}",
+        "all-age": "Todos los usuarios",
+        "age-over": "Usuarios para {{age}} años",
+        "see-more": "Ver más",
+        "badge": {
+            "discount": "Descuentos",
+            "completed": "Finalizados",
+            "recommended": "Recomendados",
+            "updated": "Subir"
+        },
+        "button-confirm": "Confirmar",
+        "new": "NUE",
+        "coming-soon": "Próximamente"
+    },
+    "side-nav": {
+        "my-information": "Mi menú",
+        "login": "Iniciar sesión o Registrar",
+        "coin": "ContentCoin",
+        "my-library": "Mis cómics",
+        "toda-now": "TODA en tiempo real",
+        "customer-support": "Atención al cliente",
+        "setting": "Configuración",
+        "logout": "Cerrar sesión"
+    },
+    "header": {
+        "login": "Iniciar sesión",
+        "billing": "Recarga de ContentCoin",
+        "setting": "Ajustes de configuración",
+        "customerSupport": "Atención al cliente",
+        "notice": "Avisos",
+        "customerSupportHistoryDetail": "Atención al cliente",
+        "unsubscribe": "Abandonar la membresía",
+        "main": "main",
+        "detail": "",
+        "webtoon": "Por Géneros",
+        "mylib": "Mis cómics",
+        "purchase": "Lista de compras",
+        "myfavorite": "Productos interesados",
+        "event": "Eventos",
+        "delete": "Eliminar",
+        "history": "Historial de recarga",
+        "title_webtoon": "Webtoon",
+        "title_webnovel": "WebNovela"
+    },
+    "main": {
+        "week": {
+            "header": "Webtoon del día",
+            "header-novel": "Novel del día"
+        },
+        "ranking": {
+            "header": "Más Leídos",
+            "description": "¡Te arrepentirás si no lo ves de inmediato!"
+        },
+        "popular": {
+            "header": "Más Populares"
+        },
+        "new-update": {
+            "header": "Más Nuevos"
+        },
+        "idol-goods": {
+            "header": "Productos de Idol",
+            "description": "¡Compra disponible para los productos de Idol!"
+        },
+        "hot-romance": {
+            "header": "Más popular de Romance",
+            "header-novel": "Más popular de Romance",
+            "description": "Historias de amor para querer enamorarse"
+        },
+        "hot-bl-picks": {
+            "header": "HOT BL Recomendados",
+            "description": "Amor entre los jóvenes guapos"
+        },
+        "cheap-sale": {
+            "header": "Gratuitos sólo por hoy",
+            "header-novel": "Gratuitos sólo por hoy"
+        },
+        "footer": {
+            "top": "Información del distribudor de Webtoon TV",
+            "contact": "Consulta telefónica",
+            "email": "Consulta por correo electrónico",
+            "address": "Dirección",
+            "address-content": "608-1, 330, Seongam-ro, Mapo-gu,\nSeoul, Republic of Korea",
+            "tel": "+082-02-6243-6242"
+        },
+        "extra-footer": {
+            "top": "Información del proveedor de tecnología",
+            "title": {
+                "name": "Nombre comercial",
+                "english-name": "Nombre comercial en inglés",
+                "registration-number": "Número de registro de la compañía",
+                "email": "Consulta por correo electrónico",
+                "phone": "Consulta",
+                "address": "Dirección"
+            },
+            "content": {
+                "name": "TODAQ GSC Inc.",
+                "english-name": "TODAQ GSC Inc.",
+                "registration-number": "197-86-01189",
+                "email": "helpdesk@todaq.net",
+                "phone": "+82-3213-8188",
+                "address": "14, Pangyoyeok-ro 192beon-gil,\nBundang-gu, Seongnam-si,\nGyeonggi-do, Republic of Korea"
+            }
+        }
+    },
+    "footer": {
+        "home": "Inicio",
+        "page": "Por Géneros",
+        "bill": "Recarga",
+        "user": "Mis cómics"
+    },
+    "search": {
+        "placeholder": "Buscar por título/ palabra clave",
+        "result": "Hay {{no}} búsquedas relacionadas"
+    },
+    "login": {
+        "header": "Iniciar sesión/ Registrar con red social",
+        "google": "Iniciar sesión con Google",
+        "facebook": "Iniciar sesión con Facebook",
+        "twitter": "Iniciar sesión con Twitter",
+        "apple": "Sign in with Apple"
+    },
+    "billing": {
+        "BL001": "Mi ContentCoin",
+        "BL002": "Seleccione la cantidad que desea recargar",
+        "BL003": "Revise el monto de pago",
+        "BL004": "Cambiar medios",
+        "BL005": "Acerca del pago",
+        "BL006": "Los webtoons comprados para alquiler o tenencia no pueden cancelarse ni reembolsarse.",
+        "BL007": "Para obtener más información sobre el pago, comuníquese con atención al cliente.",
+        "BL008": "(Obligatorio) He confirmado con lo anterior y acepto proceder con la compra.",
+        "BL009": "(Opcional) Acepto pagos con este método de pago en el futuro",
+        "BL010": "Solicitud de pago",
+        "options": {
+            "card": "Card"
+        },
+        "alert": {
+            "coin": "Seleccione el monto del pago.",
+            "approve": "Por favor, acepte el proceso de compra."
+        },
+        "amount": "Charge Price",
+        "payment-information": "Charge Info",
+        "input-card-info": "Enter your payment information",
+        "card-number": "Card Number",
+        "card-expired": "Valid Until",
+        "card-cvv": "CVV",
+        "input-user-info": "Enter the payer information",
+        "name": "Nombre",
+        "email": "Correo Electrónico",
+        "country": "El País",
+        "locality": "Localidad",
+        "address": "La Alocución",
+        "administrative-area": "Área Administrativa",
+        "postal-code": "código postal",
+        "payment": "Pago",
+        "placeholder": {
+            "first-name": "First Name",
+            "last-name": "Last Name",
+            "email": "email@address.com"
+        },
+        "confirm": "Confirmar",
+        "alert-message": "Please fill all input",
+        "history-asc": "Ascendente",
+        "history-desc": "Descendente",
+        "history-item": {
+            "title": "ContentCoin Recarga ({{tdn}} ContentCoin)"
+        }
+    },
+    "my-library": {
+        "coin": "ContentCoin",
+        "billing": "Recarga",
+        "icon-1": "Avisos\n\n",
+        "icon-2": "Recargas\nanteriores",
+        "icon-3": "Atención\nal cliente",
+        "list-1": "Cómics comprados",
+        "list-2": "Cómics interesados",
+        "list-3": "Cómics recién leídos",
+        "no-data": "No existen tales datos."
+    },
+    "history-detail": {
+        "complete": "Respuesta completada",
+        "waiting": "Esperando la respuesta"
+    },
+    "purchase-list": {
+        "no-purchased": "En total {{no}}",
+        "sort": {
+            "updated": "Por actualización",
+            "popular": "Por popularidad",
+            "name": "Por título",
+            "asc": "asc",
+            "desc": "desc"
+        },
+        "no-buy": "{{no}} en posesión",
+        "no-rent": "{{no}} en alquiler"
+    },
+    "setting": {
+        "account": "Mi cuenta",
+        "event": "Activar notificaciones sobre los beneficios",
+        "event.detail": "Reciba información sobre los beneficios de los eventos.",
+        "image-cache": "Borrar caché de imágenes",
+        "app-version": "Actualización",
+        "unsubscribe": "Abandonar la membresía",
+        "language": "Idioma",
+        "please-login": "Por favor Iniciar sesión."
+    },
+    "unsubscribe": {
+        "poll": {
+            "question": "¿Cuál es la razón de baja?",
+            "answer-1": "El uso de servicio es inconveniente y aparecen errores.",
+            "answer-2": "No hay suficiente contenidos disponibles.",
+            "answer-3": "El precio de los contenidos son caros.",
+            "answer-4": "Sentí falta de respeto en anteción al cliente.",
+            "answer-5": "Utilizo la aplicación con poca frecuencia.",
+            "answer-6": "Quiero cambiar la información de mi cuenta red social."
+        },
+        "notice": {
+            "header": "¿Cómo abandonar la membresía?",
+            "item-1": "Una vez que abandone la membresía, se perderán todos los servicios comprados.",
+            "item-2": "Se eliminarán todos los datos (como información personal y otras informaciónes). Serán imposibles de recuperarlas.",
+            "item-3": "Una vez que abandone la membresía, el ID existente no se podrá utilizar más."
+        },
+        "confirm": "He leído y acepto las condiciones. Decido abandonar la membresía.",
+        "button": "Retiro",
+        "check-option": "Por favor, confirme la razón por la que abandona la membresía",
+        "check-confirm": "Por favor, confirme el consentimiento de abandono."
+    },
+    "work-detail": {
+        "view-first": "Mirar el primer episodio",
+        "no-episodes": "En total {{no}} capítulos",
+        "sort": {
+            "asc": "Ir al primer capítulo",
+            "desc": "Ir al capítulo más nuevo"
+        },
+        "paid": {
+            "free": "Gratis",
+            "none": "Antes de comprar",
+            "rent": "Alquilado/alquilando",
+            "buy": "En posesión"
+        }
+    },
+    "work-view": {
+        "button-prev": "Episodio anterior",
+        "button-next": "Episodio siguiente",
+        "no-prev-episode": "No hay anterior épsiodo",
+        "no-next-episode": "No hay siguiente épsiodo",
+        "complete-pay-episode": "Compra completada",
+        "error-pay-episode": "Se ha producido un error."
+    },
+    "customer-support": {
+        "tab-1": "Preguntas frecuentes",
+        "tab-2": "Ayuda",
+        "tab-3": "Preguntas anteriores",
+        "notices": [
+            {
+                "title": "Guía de lanzamiento Allcomics",
+                "date": "2019-11-11",
+                "content": "Se estrenó la plataforma global de webtoon Allcomics.<br/><br/>Al nombre de Allcomics la plataforma global de webtoon, producirá y distribuirá varios servicios para brindar mucha diversión a todos los miembros.<br/><br/>Le pedimos su interés y uso.<br/><br/>Muchas gracias."
+            },
+            {
+                "title": "Acerca de ContentCoin",
+                "date": "2019-11-11",
+                "content": "ContentCoin es una moneda virtual emitida por Todaq y simplemente ContentCoin es un sistema de monedas.<br/><br/>Con la compra de ContentCoin en Allcomics pueden utilizar todos los servicios libremente."
+            },
+            {
+                "title": "Guía de un evento al iniciar sesión",
+                "date": "2019-11-11",
+                "content": "Para los miembros que muestran interés en la inauguración de Allcomics, le regalamos ContentCoin en el evento.<br/><br/>Cuando inicie sesión por primera vez mediante una red social, le regalaremos 20 ContentCoin para poder ver 10 piezas de webtoon, aproveche el servicio lo mejor posible.<br/><br/>*ContentCoin es una moneda virtual que reemplaza el sistema de monedas, sólo se puede utilizar en Allcomics."
+            }
+        ],
+        "inquiry": {
+            "faq": {
+                "header": "Preguntas frecuentes",
+                "date": "2019-11-11",
+                "contents": [
+                    {
+                        "q": "¿Cómo me puedo fijar los webtoons comprados hasta ahora?",
+                        "a": "Los detalles del servicio comprado pueden fijarse en “Menú superior izquierdo de la página principal > Mi biblioteca” o sino “Barra de menú inferior > Mi biblioteca.”<br/><br/>Pueden fijarse la lista de los productos comprados en la página “Mi biblioteca” en “Productos comprados,” para fijarse más en detalle pueden entrar a través del botón “Más.”<br/><br/>Los productos comprados se clasifican entre recursos y prestámos. Los prestámos están disponibles por 72 horas, por lo cual si pasan 72 horas desde el día de la compra, debe pagar nuevamente para poder leerlos."
+                    },
+                    {
+                        "q": "¿Cómo se recarga el ContentCoin?",
+                        "a": "Después de iniciar sesión pueden recargar en “Menú superior izquierdo de la página principal” > “Recarga ContentCoin” o sino “Barra de menú inferior” > Moneda.”<br/><br/>Si no tiene suficiente ContentCoin en la página de compra de productos, pueden ingresar a la página de recarga a través de la ventana emergente que se encuentra expuesto.<br/><br/>Pueden fijarse el gráfico de cotización de la moneda virtual ContentCoin a través de “Menú superior izquierdo de la página principal > Tiempo real TODA”"
+                    },
+                    {
+                        "q": "¿Cómo puedo pedir reembolso?",
+                        "a": "Si no utilizó ningún ContentCoin recargado dentro de los 30 días desde el día de la compra, se puede solicitar un reembolso; pero después de la compra de productos los ContentCoin restantes no se pueden reembolsar.<br/><br/>* En el caso de reembolso, solo se puede reembolsar con ContentCoin."
+                    },
+                    {
+                        "q": "¿Cómo puedo dar de baja la membresía?",
+                        "a": "Puede dar de baja a través de “Menú superior izquierdo de la página principal > Configuración > Cancelar la membresía.”<br/><br/>Al cancelar la membresía, se perderán todos los servicios comprados. Tenga en cuenta que sus compras anteriores no se recuperarán incluso si vuelve a registrar con su cuenta de red social anterior."
+                    }
+                ]
+            },
+            "submit": {
+                "header": "Pregúntanos",
+                "title-placeholder": "Ingrese el título (menos de 20 caracteres)",
+                "content-placeholder": "Ingrese su pregunta (menos de 300 caracteres)",
+                "item-1": "Las respuestas se pueden encontrar en la parte superior en \"preguntas anteriores\".",
+                "item-2": "Intentaremos responder lo más antes posible.",
+                "button": "Registro",
+                "title-error": "Ingrese el título",
+                "content-error": "Ingrese su consulta"
+            },
+            "confirmation": "Su consulta ha sido enviada correctamente."
+        },
+        "history": {
+            "waiting": "Esperando la respuesta",
+            "complete": "Respuesta completada"
+        }
+    },
+    "dialog": {
+        "detail": {
+            "header": "Pago",
+            "button-rent": "Alquilar",
+            "button-rent.detail": "disponible por 3 días",
+            "button-buy": "Recoger",
+            "footer": "Comprar"
+        },
+        "login": {
+            "header": "Iniciar sesión/Registrarse con una cuenta SNS"
+        },
+        "to-billing": {
+            "msg-1": "No hay suficiente ContentCoin para realizar la compra.",
+            "msg-2": "¿Quiere recargar el ContentCoin?",
+            "button": "Recargar"
+        },
+        "unsubscribe": {
+            "header": "Eliminar la cuenta",
+            "content": "¿De verdad desea abandonar la membresía? Si abandona la membresía, se eliminarán todas las compras y no se podrán recuperar.",
+            "button-cancel": "Cancelar",
+            "button-confirm": "Confirmar"
+        },
+        "unsubscribe-error": {
+            "not-answered": "Por favor, confirme la razón por la que abandona la membresía",
+            "not-confirmed": "Por favor, confirme el consentimiento de abandono."
+        },
+        "clear-cache": {
+            "button-cancel": "Cancelar",
+            "button-confirm": "Confirmar",
+            "content": "¿Desea eliminar la caché de imagenes?"
+        }
+    },
+    "error": {
+        "service-error": "Error de servicio",
+        "not-available": "El servidor actualmente no responde.",
+        "sorry-for-inconvenience": "Disculpe las molestias",
+        "use-after-while": "Por favor, intente de nuevo más tarde."
+    }
+}
